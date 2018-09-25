@@ -282,6 +282,17 @@ export const menus = [
                 'link': 'pages/contact'
             }
         ]
+    },
+    {
+        name: 'Management',
+        icon: 'supervisor_account',
+        open: false,
+        link: false,
+        sub: [
+            { name: 'Employee Management', icon: 'work', open: false, link: false },
+            { name: 'Supplier Management', icon: 'work', open: false, link: false },
+            { name: 'Materials Requests', icon: 'work', open: false, link: false }
+        ]
     }
     // , {
 
