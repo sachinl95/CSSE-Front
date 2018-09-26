@@ -6,7 +6,7 @@ import { LazyLoadModule } from './lazy-load/lazy-load.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 // import { SearchOrderComponent } from './constructor/search-order/search-order.component';
-import {MatTableModule,MatFormFieldModule} from '@angular/material';
+import {MatTableModule,MatFormFieldModule, MatInputModule} from '@angular/material';
 
 
 @NgModule({
