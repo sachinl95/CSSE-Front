@@ -289,7 +289,7 @@ export const menus = [
         open: false,
         link: false,
         sub: [
-            { name: 'Employee Management', icon: 'work', open: false, link: false },
+            { name: 'Employee Management', icon: 'work', open: false, link: 'management/employee' },
             { name: 'Supplier Management', icon: 'work', open: false, link: false },
             { name: 'Materials Requests', icon: 'work', open: false, link: false }
         ]
