@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import {MatTableDataSource} from '@angular/material'
+import { MatTableDataSource } from '@angular/material'
 
 @Component({
   selector: 'app-employee',
@@ -14,18 +14,21 @@ export class EmployeeComponent implements OnInit {
     // Make REST call and assign data to the employee object
     let object: rawEmployee[]
     object = [
-      { id: 'EMP001', type: 'Constructor', firstName: 'Sameer', lastName: 'Basil', address: 'Colombo', email: 'smrbasil@gmail.com', phone: '0770695817'}
+      { id: 'EMP001', type: 'Constructor', firstName: 'Sameer', lastName: 'Basil', address: 'Colombo', email: 'smrbasil@gmail.com', phone: '0770695817' }
     ]
     this.formatAndAssign(object)
   }
 
   formatAndAssign(emp: rawEmployee[]) {
     emp.forEach(element => {
-      // employee.push();
+      let name = element.firstName + ' ' + element.lastName
+      let formattedEmp: Employee
+      formattedEmp = { id: element.id, type: element.type, name: element.firstName + ' ' + element.lastName, address: element.address, email: element.address, phone: element.phone }
+      employee.push(formattedEmp);
     });
   }
 
-  displayedColumns: string[] = ['id', 'type', 'firstName', 'lastName']
+  displayedColumns: string[] = ['id', 'type', 'name']
   dataSource = new MatTableDataSource(employee)
 
   applyFilter(filterValue: string) {
