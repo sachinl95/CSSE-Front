@@ -13,6 +13,7 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit() {
     // Make REST call and assign data to the employee employeeArray
+    employee = []
     let employeeArray: rawEmployee[]
     employeeArray = []
     axios.get('http://localhost:8093/employees').then(response => {
