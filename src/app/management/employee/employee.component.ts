@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { MatTableDataSource } from '@angular/material'
+import axios from 'axios'
 
 @Component({
   selector: 'app-employee',
@@ -11,48 +12,59 @@ export class EmployeeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // Make REST call and assign data to the employee object
-    let object: rawEmployee[]
-    object = [
-      { id: 'EMP001', type: 'Constructor', firstName: 'Sameer', lastName: 'Basil', address: 'Colombo', email: 'smrbasil@gmail.com', phone: '0770695817' }
-    ]
-    this.formatAndAssign(object)
+    // Make REST call and assign data to the employee employeeArray
+    let employeeArray: rawEmployee[]
+    employeeArray = []
+    axios.get('http://localhost:8093/employees').then(response => {
+      response.data.forEach(tempEmp => {
+        let temp: rawEmployee
+        temp = {
+          empId: tempEmp.empId, type: tempEmp.type, firstName: tempEmp.firstName, lastName: tempEmp.lastName,
+          address: tempEmp.address, email: tempEmp.address, contactNo: tempEmp.contactNo
+        }
+        employeeArray.push(temp)
+      })
+      this.formatAndAssign(employeeArray)
+      this.dataSource.data = employee
+    })
   }
 
   formatAndAssign(emp: rawEmployee[]) {
     emp.forEach(element => {
       let name = element.firstName + ' ' + element.lastName
       let formattedEmp: Employee
-      formattedEmp = { id: element.id, type: element.type, name: element.firstName + ' ' + element.lastName, address: element.address, email: element.address, phone: element.phone }
+      formattedEmp = {
+        empId: element.empId, type: element.type, name: element.firstName + ' ' + element.lastName,
+        address: element.address, email: element.email, contactNo: element.contactNo
+      }
       employee.push(formattedEmp);
     });
   }
 
-  displayedColumns: string[] = ['id', 'type', 'name']
+  displayedColumns: string[] = ['empId', 'type', 'name', 'address', 'email', 'contactNo']
   dataSource = new MatTableDataSource(employee)
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase()
   }
-
 }
 
 class rawEmployee {
-  id: String
+  empId: String
   type: String
   firstName: String
   lastName: String
   address: String
   email: String
-  phone: String
+  contactNo: String
 }
 
 class Employee {
-  id: String
+  empId: String
   type: String
   name: String
   address: String
   email: String
-  phone: String
+  contactNo: String
 }
 let employee: Employee[] = []
