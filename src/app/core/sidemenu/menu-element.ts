@@ -13,7 +13,7 @@ export const menus = [
         'sub': [
             {
                 'name': 'Search Order',
-                'link': 'constructor/searchOrder',
+                'link': 'constructor/SearchOrder',
                 'icon': 'indeterminate_check_box',
                 'chip': false,
                 'open': false,
@@ -283,6 +283,7 @@ export const menus = [
             }
         ]
     },
+
     {
         name: 'Management',
         icon: 'supervisor_account',
@@ -294,6 +295,7 @@ export const menus = [
             { name: 'Materials Requests', icon: 'work', open: false, link: false }
         ]
     }
+    
     // , {
 
     //     'name': 'Charts',
