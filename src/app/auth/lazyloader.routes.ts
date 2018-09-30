@@ -5,9 +5,9 @@ import { DashboardCrmComponent } from '../dashboard-crm/dashboard-crm.component'
 export const appRoutes: Routes = [{
     path: '', component: AuthComponent, children: [
         { path: 'dashboard', component: DashboardCrmComponent },
-      //  { path: 'constructor', loadChildren: '../material-widgets/material-widgets.module#MaterialWidgetsModule' },
+        //  { path: 'constructor', loadChildren: '../material-widgets/material-widgets.module#MaterialWidgetsModule' },
         { path: 'constructor', loadChildren: '../constructor/material-widgets.module#MaterialWidgetsModule' },
-        { path: 'tables', loadChildren: '../tables/tables.module#TablesModule' },
+        { path: 'payment', loadChildren: '../payment/material-widgets.module#MaterialWidgetsModule' },
         { path: 'maps', loadChildren: '../maps/maps.module#MapsModule' },
         { path: 'charts', loadChildren: '../charts/charts.module#ChartsModule' },
         // { path: 'chats', loadChildren: '../chats/chat.module#ChatsModule' }, // fix this

@@ -156,47 +156,41 @@ export const menus = [
     // },
     {
         'name': 'Payment',
-        'icon': 'list',
+        'icon': 'money',
         'link': false,
         'open': false,
         'chip': false,
         'sub': [
             {
-                'name': 'Dashboard',
-                'icon': 'filter_list',
-                'link': 'tables/fixed',
+                'name': 'Manage Approval',
+                'icon': 'work',
+                'link': 'payment/manageApproval',
+                'open': false,
+            },
+            // {
+            //     'name': 'Suppliers',
+            //     'icon': 'filter_center_focus',
+            //     'link': 'payment/payPending',
+            //     'open': false,
+            // },
+            {
+                'name': 'Pending Payments',
+                'icon': 'payment',
+                'link': 'payment/pendingPayments',
                 'open': false,
             },
             {
-                'name': 'Payment',
-                'icon': 'done_all',
-                'link': 'tables/featured',
+                'name': 'Successfull Payments',
+                'icon': 'beenhere',
+                'link': 'payment/sucessfullPayments',
                 'open': false,
             },
-            {
-                'name': 'Suppliers',
-                'icon': 'filter_center_focus',
-                'link': 'tables/responsive',
-                'open': false,
-            },
-            {
-                'name': 'Sites',
-                'icon': 'filter_center_focus',
-                'link': 'tables/responsive',
-                'open': false,
-            },
-            {
-                'name': 'Items',
-                'icon': 'filter_center_focus',
-                'link': 'tables/responsive',
-                'open': false,
-            },
-            {
-                'name': 'Employees',
-                'icon': 'filter_center_focus',
-                'link': 'tables/responsive',
-                'open': false,
-            },
+            // {
+            //     'name': 'Employees',
+            //     'icon': 'filter_center_focus',
+            //     'link': 'payment/viewOrders',
+            //     'open': false,
+            // },
 
             
         ]
