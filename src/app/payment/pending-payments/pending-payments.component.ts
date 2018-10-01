@@ -1,27 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
+import { Payment } from '../../models/payment';
 
 @Component({
-  selector: 'app-pending-payments',
-  templateUrl: './pending-payments.component.html',
-  styleUrls: ['./pending-payments.component.scss']
+    selector: 'app-pending-payments',
+    templateUrl: './pending-payments.component.html',
+    styleUrls: ['./pending-payments.component.scss']
 })
-export class PendingPaymentsComponent {
+export class PendingPaymentsComponent implements OnInit {
 
-  displayedColumns: string[] = ['position','orderID', 'order_Date', 'amount', 'action'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  public payments:Payment[];
+  dataSource = new MatTableDataSource<Payment>(this.payments);
+    ngOnInit() {
+      this.dataSource = new MatTableDataSource<Payment>(this.payments);
+    }
 
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+    displayedColumns: string[] = ['position', 'orderID', 'order_Date', 'amount', 'action'];
+
+    applyFilter(filterValue: string) {
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+    }
 
 }
-export interface PeriodicElement {
-  orderID: string;
-  order_Date: String;
-  amount: number;
-  position: number;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position:1, orderID: 'O001', order_Date: '2018/09/30',amount:15000},
-];
