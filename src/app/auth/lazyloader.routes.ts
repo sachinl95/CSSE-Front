@@ -7,6 +7,8 @@ export const appRoutes: Routes = [{
         { path: 'dashboard', component: DashboardCrmComponent },
         { path: 'constructor', loadChildren: '../constructor/material-widgets.module#MaterialWidgetsModule' },
         { path: 'payment', loadChildren: '../payment/material-widgets.module#MaterialWidgetsModule' },
-        { path: 'management/employees', loadChildren: '../management/employees/employees.module#EmployeesModule'},
+        { path: 'management/employees', loadChildren: '../management/employees/employees.module#EmployeesModule' },
+        { path: 'management/employee', loadChildren: '../management/employee/employee.module#EmployeeModule' },
+        { path: 'management/employee/:empId', loadChildren: '../management/employee/employee.module#EmployeeModule' }
     ]
 }];

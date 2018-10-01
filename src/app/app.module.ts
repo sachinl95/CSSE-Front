@@ -8,7 +8,6 @@ import { CoreModule } from './core/core.module';
 // import { SearchOrderComponent } from './constructor/search-order/search-order.component';
 import {MatTableModule,MatFormFieldModule, MatButtonModule} from '@angular/material';
 import { ViewPendingOrdersComponent } from './supplier/view-pending-orders/view-pending-orders.component';
-import { EmployeeComponent } from './management/employee/employee.component';
 
 
 
@@ -16,7 +15,6 @@ import { EmployeeComponent } from './management/employee/employee.component';
   declarations: [
     AppComponent,
     ViewPendingOrdersComponent,
-    EmployeeComponent,
     
     
   ],

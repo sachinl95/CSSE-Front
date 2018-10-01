@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { MatTableDataSource } from '@angular/material'
 import axios from 'axios'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-employees',
@@ -9,7 +10,7 @@ import axios from 'axios'
 })
 export class EmployeesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     // Make REST call and assign data to the employee employeeArray
@@ -47,6 +48,14 @@ export class EmployeesComponent implements OnInit {
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase()
+  }
+
+  goToAddEmployee() {
+    this.router.navigate(['auth/management/employee'])
+  }
+
+  goToModifyEmployee(empId) {
+    this.router.navigate(['auth/management/employee/qwe'], empId)
   }
 }
 
