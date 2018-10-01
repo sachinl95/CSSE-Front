@@ -8,7 +8,9 @@ import { CoreModule } from './core/core.module';
 // import { SearchOrderComponent } from './constructor/search-order/search-order.component';
 import {MatTableModule,MatFormFieldModule, MatButtonModule} from '@angular/material';
 import { ViewPendingOrdersComponent } from './supplier/view-pending-orders/view-pending-orders.component';
-
+import { HttpModule } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { PendingPaymentsService } from './payment/pending-payments/pending-payments.service';
 
 
 @NgModule({
@@ -25,9 +27,11 @@ import { ViewPendingOrdersComponent } from './supplier/view-pending-orders/view-
     BrowserAnimationsModule,
     MatTableModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PendingPaymentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

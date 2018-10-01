@@ -1,8 +1,8 @@
 export class Payment{
-    orderId:number;
+    orderId:string;
     supplierName:string;
-    date:Date;
-    bankAccountNumber:number;
+    date:String;
+    bankAccountNumber:string;
     amount:number;
     status:boolean;
 }
