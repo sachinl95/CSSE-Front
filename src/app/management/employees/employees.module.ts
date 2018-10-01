@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EmployeeComponent } from './employee.component';
+import { EmployeesComponent } from './employees.component';
 import { Routes, RouterModule } from '@angular/router';
 import { DndModule } from 'ng2-dnd';
 import { FormsModule } from '@angular/forms';
@@ -12,7 +12,7 @@ import {
         MatCardModule
     } from '@angular/material';
 export const ROUTES: Routes = [
-   { path: '', component: EmployeeComponent }, 
+   { path: '', component: EmployeesComponent }, 
 ];
 @NgModule({
   imports: [
@@ -30,6 +30,6 @@ export const ROUTES: Routes = [
     MatButtonModule,
     MatGridListModule
   ],
-  declarations: [EmployeeComponent]
+  declarations: [EmployeesComponent]
 })
-export class EmployeeModule { }
+export class EmployeesModule { }

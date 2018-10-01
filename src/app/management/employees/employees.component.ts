@@ -3,11 +3,11 @@ import { MatTableDataSource } from '@angular/material'
 import axios from 'axios'
 
 @Component({
-  selector: 'app-employee',
-  templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.scss']
+  selector: 'app-employees',
+  templateUrl: './employees.component.html',
+  styleUrls: ['./employees.component.scss']
 })
-export class EmployeeComponent implements OnInit {
+export class EmployeesComponent implements OnInit {
 
   constructor() { }
 
