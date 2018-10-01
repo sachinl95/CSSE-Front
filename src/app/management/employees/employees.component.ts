@@ -55,7 +55,7 @@ export class EmployeesComponent implements OnInit {
   }
 
   goToModifyEmployee(empId) {
-    this.router.navigate(['auth/management/employee/qwe'], empId)
+    this.router.navigate(['auth/management/employee/' + empId])
   }
 }
 
