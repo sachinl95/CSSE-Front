@@ -1,3 +1,40 @@
-<p>
-  successfull-payments works!
-</p>
+<h3 class="card-title">Pending Payments</h3>
+<ng-container>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+</ng-container>
+  <table mat-table [dataSource]="dataSource" class="table">
+
+    <!-- Position Column 
+    <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let payments"> {{element.position}} </td>
+      </ng-container>-->
+
+    <!-- orderID Column -->
+    <ng-container matColumnDef="orderID">
+      <th mat-header-cell *matHeaderCellDef>Order ID</th>
+      <td mat-cell *matCellDef="let payments"> {{payments.orderId}} </td>
+    </ng-container>
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="order_Date">
+      <th mat-header-cell *matHeaderCellDef>Date</th>
+      <td mat-cell *matCellDef="let payments"> {{payments.date}} </td>
+    </ng-container>
+
+    <!-- Amount Column -->
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef>Amount</th>
+      <td mat-cell *matCellDef="let payments"> {{payments.amount}} </td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="view">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let payments"><button mat-stroked-button color="primary">View</button>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

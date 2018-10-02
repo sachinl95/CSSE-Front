@@ -11,6 +11,8 @@ import { ViewPendingOrdersComponent } from './supplier/view-pending-orders/view-
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { PendingPaymentsService } from './payment/pending-payments/pending-payments.service';
+import { SuccessfullPaymentsComponent } from './payment/successfull-payments/successfull-payments.component';
+import { SuccessfullPaymentsService } from './payment/successfull-payments/successfull-payments.service';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { PendingPaymentsService } from './payment/pending-payments/pending-payme
     HttpModule,
     HttpClientModule
   ],
-  providers: [PendingPaymentsService],
+  providers: [PendingPaymentsService,
+              SuccessfullPaymentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

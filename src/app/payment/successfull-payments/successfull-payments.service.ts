@@ -6,14 +6,14 @@ import { Payment } from '../../models/payment';
 import 'rxjs/add/operator/catch';
 
 @Injectable()
-export class PendingPaymentsService {
+export class SuccessfullPaymentsService {
 
   payment:Payment;
   constructor(private httpclient: HttpClient) { 
   }
 
-  getPendingPayments()
+  getPaidPayments()
   {
-    return this.httpclient.get(constant.HOME_URL + 'payments/pending')
+    return this.httpclient.get(constant.HOME_URL + 'payments/paid')
   }
 }
