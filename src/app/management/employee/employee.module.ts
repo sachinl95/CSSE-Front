@@ -5,7 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { DndModule } from 'ng2-dnd';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { MatTableModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatGridListModule, MatSelectModule, MatOptionModule } from '@angular/material';
+import { MatTableModule, MatFormFieldModule, MatInputModule,
+     MatButtonModule, MatGridListModule, MatSelectModule, MatOptionModule,
+     MatIconModule} from '@angular/material';
 import {
     MatToolbarModule,
     MatListModule,
@@ -30,7 +32,8 @@ export const ROUTES: Routes = [
         MatButtonModule,
         MatGridListModule,
         MatSelectModule,
-        MatOptionModule
+        MatOptionModule,
+        MatIconModule
     ],
     declarations: [EmployeeComponent]
 })

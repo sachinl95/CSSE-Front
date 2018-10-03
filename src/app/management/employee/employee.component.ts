@@ -81,6 +81,10 @@ export class EmployeeComponent implements OnInit {
         }
     }
 
+    goBack() {
+        this.router.navigate(['auth/management/employees'])
+    }
+
     ngOnDestroy() {
         this.sub.unsubscribe()
     }
