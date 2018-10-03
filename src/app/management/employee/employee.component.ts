@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import axios from 'axios'
 
 @Component({
@@ -21,7 +21,7 @@ export class EmployeeComponent implements OnInit {
         email: '',
         contactNo: ''
     }
-    constructor(private route: ActivatedRoute) { }
+    constructor(private route: ActivatedRoute, private router: Router) { }
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
@@ -58,10 +58,27 @@ export class EmployeeComponent implements OnInit {
             method: method,
             data: this.employee
         }).then(response => {
-            if (response.status === 200 || response.status === 201) {
-                alert('Changes have bee saved' + response.status)
+            if (response.status === 200) {
+                alert('Employee ' + this.empId + ' has been updated')
+                this.router.navigate(['auth/management/employees'])
+            } else if (response.status === 201) {
+                alert('Employee has been added')
+                this.router.navigate(['auth/management/employees'])
             }
+        }).catch(error => {
+            alert('An error occured\n' + error.response.data.message)
         })
+    }
+
+    removeEmployee() {
+        if (this.empId !== undefined) {
+            axios.delete('http://localhost:8093/employees/' + this.empId).then(response => {
+                alert('Employee has been removed')
+                this.router.navigate(['auth/management/employees'])
+            }).catch(error => {
+                alert(error.response.message)
+            })
+        }
     }
 
     ngOnDestroy() {

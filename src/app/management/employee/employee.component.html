@@ -1,7 +1,14 @@
 <mat-card>
-  <h1 class="center-text">
-    {{title}}
-  </h1>
+  <mat-grid-list cols="2" rowHeight="8:1">
+    <mat-grid-tile>
+      <h1 class="center-text">
+        {{title}}
+      </h1>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button *ngIf="empId !== undefined" mat-raised-button (click)="removeEmployee()">Remove Employee</button>
+    </mat-grid-tile>
+  </mat-grid-list>
   <div class="example-container center-text">
 
     <mat-form-field *ngIf="empId === undefined">
