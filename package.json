@@ -13,8 +13,8 @@
   "private": true,
   "dependencies": {
     "@agm/core": "^1.0.0-beta.3",
-    "@angular/animations": "^6.1.9",
-    "@angular/cdk": "^6.4.7",
+    "@angular/animations": "^6.0.7",
+    "@angular/cdk": "^6.3.3",
     "@angular/common": "^6.0.7",
     "@angular/compiler": "^6.0.7",
     "@angular/core": "^6.0.7",
@@ -31,7 +31,6 @@
     "angular-svg-round-progressbar": "^2.0.0",
     "angular2-chartjs": "^0.4.1",
     "angularfire2": "^5.0.0-rc.5-next",
-    "axios": "^0.18.0",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.7",
     "d3": "^4.13.0",

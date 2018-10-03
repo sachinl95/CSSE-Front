@@ -6,16 +6,13 @@ import { LazyLoadModule } from './lazy-load/lazy-load.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 // import { SearchOrderComponent } from './constructor/search-order/search-order.component';
-import {MatTableModule,MatFormFieldModule, MatButtonModule} from '@angular/material';
-import { ViewPendingOrdersComponent } from './supplier/view-pending-orders/view-pending-orders.component';
-
+import {MatTableModule,MatFormFieldModule} from '@angular/material';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ViewPendingOrdersComponent,
-    
+
     
   ],
   imports: [
@@ -24,8 +21,7 @@ import { ViewPendingOrdersComponent } from './supplier/view-pending-orders/view-
     CoreModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatFormFieldModule,
-    MatButtonModule
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
