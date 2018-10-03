@@ -1,3 +1,39 @@
-<p>
-  employee works!
-</p>
+<mat-card>
+  <h1 class="center-text">
+    Add Employee
+  </h1>
+  <div class="example-container center-text">
+
+    <mat-form-field>
+      <mat-select placeholder="Select Employee Type">
+        <mat-option value="Authorized Employee">Authorized Employee</mat-option>
+        <mat-option value="Site Manager">Site Manager</mat-option>
+        <mat-option value="Procurement Staff">Procurement Staff</mat-option>
+        <mat-option value="Senior Member of Staff">Senior Member of Staff</mat-option>
+        <mat-option value="Management">Management</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="First Name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Last Name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Address">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Contact No.">
+    </mat-form-field>
+
+    <button mat-raised-button (click)="addEmployee()">Add Employee</button>
+  </div>
+</mat-card>
