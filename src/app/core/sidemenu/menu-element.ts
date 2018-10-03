@@ -156,41 +156,47 @@ export const menus = [
     // },
     {
         'name': 'Payment',
-        'icon': 'money',
+        'icon': 'list',
         'link': false,
         'open': false,
         'chip': false,
         'sub': [
             {
-                'name': 'Manage Approval',
-                'icon': 'work',
-                'link': 'payment/manageApproval',
-                'open': false,
-            },
-            // {
-            //     'name': 'Suppliers',
-            //     'icon': 'filter_center_focus',
-            //     'link': 'payment/payPending',
-            //     'open': false,
-            // },
-            {
-                'name': 'Pending Payments',
-                'icon': 'payment',
-                'link': 'payment/pendingPayments',
+                'name': 'Dashboard',
+                'icon': 'filter_list',
+                'link': 'tables/fixed',
                 'open': false,
             },
             {
-                'name': 'Successfull Payments',
-                'icon': 'beenhere',
-                'link': 'payment/sucessfullPayments',
+                'name': 'Payment',
+                'icon': 'done_all',
+                'link': 'tables/featured',
                 'open': false,
             },
-            // {
-            //     'name': 'Employees',
-            //     'icon': 'filter_center_focus',
-            //     'link': 'payment/viewOrders',
-            //     'open': false,
-            // },
+            {
+                'name': 'Suppliers',
+                'icon': 'filter_center_focus',
+                'link': 'tables/responsive',
+                'open': false,
+            },
+            {
+                'name': 'Sites',
+                'icon': 'filter_center_focus',
+                'link': 'tables/responsive',
+                'open': false,
+            },
+            {
+                'name': 'Items',
+                'icon': 'filter_center_focus',
+                'link': 'tables/responsive',
+                'open': false,
+            },
+            {
+                'name': 'Employees',
+                'icon': 'filter_center_focus',
+                'link': 'tables/responsive',
+                'open': false,
+            },
 
             
         ]
@@ -275,17 +281,6 @@ export const menus = [
                 'open': false,
                 'link': 'pages/contact'
             }
-        ]
-    },
-    {
-        name: 'Management',
-        icon: 'supervisor_account',
-        open: false,
-        link: false,
-        sub: [
-            { name: 'Employee Management', icon: 'work', open: false, link: 'management/employees' },
-            { name: 'Supplier Management', icon: 'work', open: false, link: false },
-            { name: 'Materials Requests', icon: 'work', open: false, link: false }
         ]
     }
     // , {
