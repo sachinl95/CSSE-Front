@@ -1,11 +1,15 @@
 <mat-card>
   <h1 class="center-text">
-    Add Employee
+    {{title}}
   </h1>
   <div class="example-container center-text">
 
+    <mat-form-field *ngIf="empId === undefined">
+      <input matInput placeholder="Employee ID" [(ngModel)]="employee.empId">
+    </mat-form-field>
+
     <mat-form-field>
-      <mat-select placeholder="Select Employee Type">
+      <mat-select placeholder="Select Employee Type" [(ngModel)]="employee.type">
         <mat-option value="Authorized Employee">Authorized Employee</mat-option>
         <mat-option value="Site Manager">Site Manager</mat-option>
         <mat-option value="Procurement Staff">Procurement Staff</mat-option>
@@ -15,25 +19,25 @@
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="First Name">
+      <input matInput placeholder="First Name" [(ngModel)]="employee.firstName">
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Last Name">
+      <input matInput placeholder="Last Name" [(ngModel)]="employee.lastName">
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Address">
+      <input matInput placeholder="Address" [(ngModel)]="employee.address">
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Email">
+      <input matInput placeholder="Email" [(ngModel)]="employee.email">
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Contact No.">
+      <input matInput placeholder="Contact No." [(ngModel)]="employee.contactNo">
     </mat-form-field>
 
-    <button mat-raised-button (click)="addEmployee()">Add Employee</button>
+    <button mat-raised-button (click)="addOrUpdateEmployee()">{{buttonText}}</button>
   </div>
 </mat-card>
