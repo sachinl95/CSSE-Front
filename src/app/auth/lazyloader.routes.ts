@@ -9,6 +9,7 @@ export const appRoutes: Routes = [{
         { path: 'payment', loadChildren: '../payment/material-widgets.module#MaterialWidgetsModule' },
         { path: 'management/employees', loadChildren: '../management/employees/employees.module#EmployeesModule' },
         { path: 'management/employee', loadChildren: '../management/employee/employee.module#EmployeeModule' },
-        { path: 'management/employee/:empId', loadChildren: '../management/employee/employee.module#EmployeeModule' }
+        { path: 'management/employee/:empId', loadChildren: '../management/employee/employee.module#EmployeeModule' },
+        { path: 'procument-staff/site', loadChildren: '../procument-staff/site/site.module#SiteModule' }
     ]
 }];
