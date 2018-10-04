@@ -10,6 +10,8 @@ export const appRoutes: Routes = [{
         { path: 'management/employees', loadChildren: '../management/employees/employees.module#EmployeesModule' },
         { path: 'management/employee', loadChildren: '../management/employee/employee.module#EmployeeModule' },
         { path: 'management/employee/:empId', loadChildren: '../management/employee/employee.module#EmployeeModule' },
-        { path: 'management/suppliers', loadChildren: '../management/suppliers/suppliers.module#SuppliersModule' }
+        { path: 'management/suppliers', loadChildren: '../management/suppliers/suppliers.module#SuppliersModule' },
+        { path: 'management/supplier', loadChildren: '../management/supplier/supplier.module#SupplierModule' },
+        { path: 'management/supplier/:supplierId', loadChildren: '../management/supplier/supplier.module#SupplierModule' }
     ]
 }];
