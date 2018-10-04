@@ -19,7 +19,9 @@ export class EmployeeComponent implements OnInit {
         lastName: '',
         address: '',
         email: '',
-        contactNo: ''
+        contactNo: '',
+        role: '',
+        managedSiteId: ''
     }
     constructor(private route: ActivatedRoute, private router: Router) { }
 
@@ -42,9 +44,11 @@ export class EmployeeComponent implements OnInit {
                 this.employee.address = response.data.address
                 this.employee.email = response.data.email
                 this.employee.contactNo = response.data.contactNo
+                this.employee.role = response.data.role
+                this.employee.managedSiteId = response.data.managedSiteId
             }).catch(error => {
                 this.router.navigate(['auth/management/employees'])
-              })
+            })
         }
     }
 

@@ -2,8 +2,8 @@
   <mat-grid-list cols="3" rowHeight="8:1">
     <mat-grid-tile>
       <button mat-icon-button (click)="goBack()">
-          <mat-icon aria-label="Example icon-button with a heart icon">arrow_back</mat-icon>
-        </button>
+        <mat-icon aria-label="Example icon-button with a heart icon">arrow_back</mat-icon>
+      </button>
     </mat-grid-tile>
     <mat-grid-tile>
       <h1 class="center-text">
@@ -28,6 +28,14 @@
         <mat-option value="Senior Member of Staff">Senior Member of Staff</mat-option>
         <mat-option value="Management">Management</mat-option>
       </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="employee.type === 'Senior Member of Staff'">
+      <input matInput placeholder="Role" [(ngModel)]="employee.role">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="employee.type === 'Site Manager'">
+      <input matInput placeholder="Managed Site ID" [(ngModel)]="employee.managedSiteId">
     </mat-form-field>
 
     <mat-form-field>
