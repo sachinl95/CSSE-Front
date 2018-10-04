@@ -1,3 +1,63 @@
-<p>
-  approved-requests works!
-</p>
+<mat-card>
+  <h1 class="center-text">
+    Approved Requests
+  </h1>
+
+  <ng-container class="col-md-12">
+
+
+  </ng-container>
+  <mat-grid-list cols="2" rowHeight="8:1">
+    <mat-grid-tile>
+      <div class="col-md-6">
+        <form class="example-form">
+          <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+          </mat-form-field>
+        </form>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="col-md-6">
+        <button mat-raised-button (click)="goToAddEmployee()">Request Purchase</button>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="empId">
+      <th mat-header-cell *matHeaderCellDef> Employee ID </th>
+      <td mat-cell *matCellDef="let employee" (click)="goToModifyEmployee(employee.empId)"> {{employee.empId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef> Type </th>
+      <td mat-cell *matCellDef="let employee" (click)="goToModifyEmployee(employee.empId)"> {{employee.type}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let employee" (click)="goToModifyEmployee(employee.empId)"> {{employee.name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef> Address </th>
+      <td mat-cell *matCellDef="let employee" (click)="goToModifyEmployee(employee.empId)"> {{employee.address}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let employee" (click)="goToModifyEmployee(employee.empId)"> {{employee.email}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="contactNo">
+      <th mat-header-cell *matHeaderCellDef> Contact No. </th>
+      <td mat-cell *matCellDef="let employee" (click)="goToModifyEmployee(employee.empId)"> {{employee.contactNo}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>
