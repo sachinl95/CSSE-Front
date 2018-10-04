@@ -1,9 +1,10 @@
 export const menus = [
-    { 'name': 'Dashboard',
-    'link': '/auth/dashboard',
-    'icon': 'dashboard',
-    'chip': false,
-    'open': true
+    {
+        'name': 'Dashboard',
+        'link': '/auth/dashboard',
+        'icon': 'dashboard',
+        'chip': false,
+        'open': true
     },
     {
         'name': 'Constructor',
@@ -62,11 +63,11 @@ export const menus = [
                 'open': false,
             },
 
-            
+
         ]
 
     },
-     {
+    {
         'name': 'Site Manager',
         'icon': 'view_module',
         'open': false,
@@ -143,9 +144,14 @@ export const menus = [
         sub: [
             { name: 'Employee Management', icon: 'work', open: false, link: 'management/employees' },
             { name: 'Supplier Management', icon: 'work', open: false, link: 'management/suppliers' },
-            { name: 'Materials Requests', icon: 'work', open: false, link: false },
+            {
+                name: 'Materials Requests', icon: 'work', open: false, link: false, sub: [
+                    { name: 'View Approved Requests', icon: 'work', open: false, link: false },
+                    { name: 'Request Purchases', icon: 'work', open: false, link: false },
+                ]
+            },
             { name: 'Business Policies', icon: 'work', open: false, link: 'management/policies' },
         ]
     }
-    
+
 ];

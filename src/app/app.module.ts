@@ -14,7 +14,7 @@ import { ViewPendingOrdersComponent } from './supplier/view-pending-orders/view-
 @NgModule({
   declarations: [
     AppComponent,
-    ViewPendingOrdersComponent,
+    ViewPendingOrdersComponent
     
     
   ],
