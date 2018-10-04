@@ -1,0 +1,52 @@
+<mat-card>
+    <h3 class="center-text">
+        Add Item
+    </h3>
+    <form [formGroup]="regiForm" (ngSubmit)="onFormSubmit(regiForm.value)">
+        <div class="example-container">
+            
+                <mat-form-field>  
+                    <input  formControlName="itemName" matInput placeholder="Item Name" type="text">  
+                </mat-form-field>
+                <mat-error>  
+                    <span *ngIf="!regiForm.get('itemName').valid && regiForm.get('itemName').touched">Please enter Item Name</span>  
+                </mat-error> 
+  
+                <mat-form-field>
+                    <input  matInput formControlName="categoryId" placeholder="Category Id" type="text">
+               </mat-form-field>
+               <mat-error>  
+                      <span *ngIf="!regiForm.get('categoryId').valid && regiForm.get('categoryId').touched">Please enter Category Id</span>  
+               </mat-error>
+
+               <mat-form-field>
+                  <input matInput formControlName="price" placeholder="Price" type="number">
+               </mat-form-field>
+               <mat-error>  
+                    <span *ngIf="!regiForm.get('price').valid && regiForm.get('price').touched">Please enter Price</span>  
+               </mat-error>
+
+               <mat-form-field>
+                  <input matInput formControlName="deliveryInformation" placeholder="Delivery Info" type="text-aria">
+               </mat-form-field>
+               <mat-error>  
+                    <span *ngIf="!regiForm.get('deliveryInformation').valid && regiForm.get('deliveryInformation').touched">Please enter Delivery Information</span>  
+               </mat-error>
+
+               <!-- <mat-form-field>
+               <mat-select placeholder="Favorite food" formControlName="foodValue">
+                  <mat-option *ngFor="let food of foods" [value]="food.value">
+                    {{food.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field> -->
+            
+
+        <div>
+            <button mat-raised-button color="accent">Submit</button>
+        </div>
+        </div>
+        
+    </form>
+
+</mat-card>
