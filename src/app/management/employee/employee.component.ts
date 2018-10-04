@@ -42,7 +42,9 @@ export class EmployeeComponent implements OnInit {
                 this.employee.address = response.data.address
                 this.employee.email = response.data.email
                 this.employee.contactNo = response.data.contactNo
-            })
+            }).catch(error => {
+                this.router.navigate(['auth/management/employees'])
+              })
         }
     }
 

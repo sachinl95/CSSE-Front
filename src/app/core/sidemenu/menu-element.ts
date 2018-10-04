@@ -284,8 +284,9 @@ export const menus = [
         link: false,
         sub: [
             { name: 'Employee Management', icon: 'work', open: false, link: 'management/employees' },
-            { name: 'Supplier Management', icon: 'work', open: false, link: false },
-            { name: 'Materials Requests', icon: 'work', open: false, link: false }
+            { name: 'Supplier Management', icon: 'work', open: false, link: 'management/suppliers' },
+            { name: 'Materials Requests', icon: 'work', open: false, link: false },
+            { name: 'Business Policies', icon: 'work', open: false, link: false },
         ]
     }
     // , {

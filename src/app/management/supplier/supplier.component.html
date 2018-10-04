@@ -1,0 +1,62 @@
+<mat-card>
+  <mat-grid-list cols="3" rowHeight="8:1">
+    <mat-grid-tile>
+      <button mat-icon-button (click)="goBack()">
+        <mat-icon aria-label="Example icon-button with a heart icon">arrow_back</mat-icon>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <h1 class="center-text">
+        {{title}}
+      </h1>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button *ngIf="supplierId !== undefined" mat-raised-button (click)="removeSupplier()">Remove Employee</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div class="example-container center-text">
+
+    <mat-form-field *ngIf="supplierId === undefined">
+      <input matInput placeholder="Supplier ID" [(ngModel)]="supplier.supplierId">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Name" [(ngModel)]="supplier.name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Bank Account Number" [(ngModel)]="supplier.bankAccount">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Address" [(ngModel)]="supplier.address">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Email" [(ngModel)]="supplier.email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Contact No." [(ngModel)]="supplier.contactNo">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Items" [formControl]="toppings" multiple>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-grid-list cols="3" rowHeight="8:1">
+      <mat-grid-tile>
+        <mat-checkbox matInput [(ngModel)]="supplier.available">Available</mat-checkbox>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-checkbox matInput [(ngModel)]="supplier.blacklisted">Blacklisted</mat-checkbox>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+
+    <button mat-raised-button (click)="addOrUpdateSupplier()">{{buttonText}}</button>
+  </div>
+</mat-card>
