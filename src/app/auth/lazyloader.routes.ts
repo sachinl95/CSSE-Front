@@ -12,6 +12,7 @@ export const appRoutes: Routes = [{
         { path: 'management/employee/:empId', loadChildren: '../management/employee/employee.module#EmployeeModule' },
         { path: 'management/suppliers', loadChildren: '../management/suppliers/suppliers.module#SuppliersModule' },
         { path: 'management/supplier', loadChildren: '../management/supplier/supplier.module#SupplierModule' },
-        { path: 'management/supplier/:supplierId', loadChildren: '../management/supplier/supplier.module#SupplierModule' }
+        { path: 'management/supplier/:supplierId', loadChildren: '../management/supplier/supplier.module#SupplierModule' },
+        { path: 'management/policies', loadChildren: '../management/policies/policies.module#PoliciesModule' }
     ]
 }];

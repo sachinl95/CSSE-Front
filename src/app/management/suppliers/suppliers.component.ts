@@ -29,8 +29,8 @@ export class SuppliersComponent implements OnInit {
           blacklisted: supplier.blacklisted
         }
         suppliers.push(tempSupplier)
-        this.dataSource.data = suppliers
       });
+      this.dataSource.data = suppliers
     }).catch(error => {
 
     })
