@@ -13,6 +13,8 @@ export const appRoutes: Routes = [{
         { path: 'management/suppliers', loadChildren: '../management/suppliers/suppliers.module#SuppliersModule' },
         { path: 'management/supplier', loadChildren: '../management/supplier/supplier.module#SupplierModule' },
         { path: 'management/supplier/:supplierId', loadChildren: '../management/supplier/supplier.module#SupplierModule' },
-        { path: 'management/policies', loadChildren: '../management/policies/policies.module#PoliciesModule' }
+        { path: 'management/policies', loadChildren: '../management/policies/policies.module#PoliciesModule' },
+        { path: 'management/policy', loadChildren: '../management/policy/policy.module#PolicyModule'},
+        { path: 'management/policy/:policyId', loadChildren: '../management/policy/policy.module#PolicyModule'}
     ]
 }];
