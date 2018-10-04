@@ -2,7 +2,7 @@
 <ng-container>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
 </ng-container>
-  <table mat-table [dataSource]="dataSource" class="table">
+  <table mat-table [dataSource]="dataSource" class="table table-striped">
 
     <!-- Position Column 
     <ng-container matColumnDef="position">
