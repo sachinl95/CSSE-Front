@@ -20,9 +20,9 @@ import { ViewOrderService } from './payment/view-order/view-order.service';
 @NgModule({
   declarations: [
     AppComponent,
-    ViewPendingOrdersComponent,
-
-
+    ViewPendingOrdersComponent
+    
+    
   ],
   imports: [
     BrowserModule,

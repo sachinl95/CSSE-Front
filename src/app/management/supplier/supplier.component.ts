@@ -34,14 +34,13 @@ export class SupplierComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       this.supplierId = params['supplierId']
     })
-    // axios.get('http://localhost:8093/items').then(response => { // TODO: Check URL and item.name/title
-    //   response.data.forEach(item => {
-    //     this.toppingList.push(item.itemName)
-    //   });
-    // }).catch(error => {
-    //   console.log('Failed to get the items from the database')
-    // })
-    this.toppingList = ['Cement', 'Bricks', 'Sand']
+    axios.get('http://localhost:8093/items').then(response => {
+      response.data.message.forEach(item => {
+        this.toppingList.push(item.itemName)
+      });
+    }).catch(error => {
+      console.log('Failed to get the items from the database')
+    })
 
     if (this.supplierId === undefined) {
       this.title = 'Add Supplier'

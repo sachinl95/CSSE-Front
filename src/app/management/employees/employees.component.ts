@@ -22,7 +22,7 @@ export class EmployeesComponent implements OnInit {
         let temp: rawEmployee
         temp = {
           empId: tempEmp.empId, type: tempEmp.type, firstName: tempEmp.firstName, lastName: tempEmp.lastName,
-          address: tempEmp.address, email: tempEmp.address, contactNo: tempEmp.contactNo
+          address: tempEmp.address, email: tempEmp.address, contactNo: tempEmp.contactNo, role: tempEmp.role, managedSiteId: tempEmp.managedSiteId
         }
         employeeArray.push(temp)
       })
@@ -37,13 +37,13 @@ export class EmployeesComponent implements OnInit {
       let formattedEmp: Employee
       formattedEmp = {
         empId: element.empId, type: element.type, name: element.firstName + ' ' + element.lastName,
-        address: element.address, email: element.email, contactNo: element.contactNo
+        address: element.address, email: element.email, contactNo: element.contactNo, role: element.role, managedSiteId: element.managedSiteId
       }
       employee.push(formattedEmp);
     });
   }
 
-  displayedColumns: string[] = ['empId', 'type', 'name', 'address', 'email', 'contactNo']
+  displayedColumns: string[] = ['empId', 'type', 'name', 'address', 'email', 'contactNo', 'role', 'managedSiteId']
   dataSource = new MatTableDataSource(employee)
 
   applyFilter(filterValue: string) {
@@ -67,6 +67,8 @@ class rawEmployee {
   address: String
   email: String
   contactNo: String
+  role: String
+  managedSiteId: String
 }
 
 class Employee {
@@ -76,5 +78,7 @@ class Employee {
   address: String
   email: String
   contactNo: String
+  role: String
+  managedSiteId: String
 }
 let employee: Employee[] = []
