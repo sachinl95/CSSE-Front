@@ -7,16 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 // import { SearchOrderComponent } from './constructor/search-order/search-order.component';
 import {MatTableModule,MatFormFieldModule, MatButtonModule} from '@angular/material';
-import { ViewPendingOrdersComponent } from './supplier/view-pending-orders/view-pending-orders.component';
-import { SiteComponent } from './procument-staff/site/site.component';
+import { ViewPendingOrdersComponent } from './supplier/view-pending-orders/view-pending-orders.component'; 
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ViewPendingOrdersComponent,
-    SiteComponent,
+    ViewPendingOrdersComponent 
     
     
   ],
