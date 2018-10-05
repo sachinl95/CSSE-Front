@@ -1,0 +1,65 @@
+<mat-card>
+    <h3 class="center-text">
+      Request Order 
+    </h3>
+
+    <!-- <form #CreateItemForm="ngForm">
+            <div class="example-container">
+                
+                    <mat-form-field>  
+                        <input name="itemName" [(ngModel)]="order.itemName" matInput placeholder="Item Name" #itemName="ngModel" type="text">  
+                    </mat-form-field>
+                   
+            
+            <div>
+                <button type="submit" (click)="onSubmit(CreateItemForm)" mat-raised-button color="accent">Submit</button>
+            </div>
+            </div>
+            
+    </form> -->
+
+    <form [formGroup]="orderForm" (ngSubmit)="onFormSubmit(orderForm.value)">
+            <div class="example-container">
+
+                    <mat-form-field>
+                        <mat-select placeholder="Select Item" formControlName="items">
+                            <mat-option *ngFor="let itemname of nameList" [value]="itemname">
+                                    {{itemname}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>  
+                            <span *ngIf="!orderForm.get('items').valid && orderForm.get('items').touched">Please select Item Name</span>  
+                    </mat-error>
+
+                    <mat-form-field>  
+                            <input  formControlName="quentity" matInput placeholder="quentity" type="text">  
+                    </mat-form-field>
+                    <mat-error>  
+                            <span *ngIf="!orderForm.get('quentity').valid && orderForm.get('quentity').touched">Please enter Quentity</span>  
+                    </mat-error>
+
+                    <mat-form-field>
+                            <input matInput type="date" placeholder="Choose a date" formControlName="orderDate">
+                           
+                    </mat-form-field>
+                    <mat-error>  
+                            <span *ngIf="!orderForm.get('orderDate').valid && orderForm.get('orderDate').touched">Please select Date</span>  
+                    </mat-error>
+
+                    <mat-form-field>
+                            <input matInput type="text" placeholder="Enter Suplier Name" formControlName="supplierName">
+                           
+                    </mat-form-field>
+                    <mat-error>  
+                            <span *ngIf="!orderForm.get('supplierName').valid && orderForm.get('supplierName').touched">Please select Date</span>  
+                    </mat-error>
+        
+                    
+        
+                    <button mat-raised-button color="accent">Submit</button>
+
+            </div>
+    </form>
+
+</mat-card>
