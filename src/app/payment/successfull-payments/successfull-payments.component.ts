@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { MatTableDataSource, MatSort } from '@angular/material';
 import { Payment } from '../../models/payment';
 import { SuccessfullPaymentsService } from './successfull-payments.service';
+import { PaymentSharedService } from '../payment-shared.service';
 
 @Component({
   selector: 'app-successfull-payments',
@@ -13,7 +14,7 @@ export class SuccessfullPaymentsComponent implements OnInit {
   public payments: Payment[];
   dataSource = new MatTableDataSource<Payment>(this.payments);
   @ViewChild(MatSort) sort: MatSort;
-  constructor(private successfullPaymentsService:SuccessfullPaymentsService, private changeDetectorRefs: ChangeDetectorRef) { }
+  constructor(private successfullPaymentsService:SuccessfullPaymentsService, private changeDetectorRefs: ChangeDetectorRef,private paymentSharedService:PaymentSharedService) { }
 
   ngOnInit() {
     this.refresh()
@@ -38,6 +39,10 @@ export class SuccessfullPaymentsComponent implements OnInit {
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+  getRecord(row){
+    console.log(row);
+    this.paymentSharedService.saveOrderID(row);
   }
 
 }

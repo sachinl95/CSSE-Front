@@ -42,4 +42,8 @@ export class PendingPaymentsComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  getRecord(row){
+    console.log(row);
+  }
+
 }

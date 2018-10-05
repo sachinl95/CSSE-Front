@@ -1,6 +1,34 @@
-<div class="jumbotron">
-  <h1>Angular CLI v6 + Bootstrap & FontAwesome</h1>
-  <p>
-    In this tutorial you learn how to use Angular CLI v6 with Bootstrap and FontAwesome!
-  </p>
-</div>
+<h3 class="card-title">View Order Deatails</h3>
+<ng-container>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+</ng-container>
+<table mat-table [dataSource]="dataSource" class="table table-striped">
+
+  <!-- Item Column -->
+  <ng-container matColumnDef="item">
+    <th mat-header-cell *matHeaderCellDef>Item</th>
+    <td mat-cell *matCellDef="let payments"> {{items[0][0].itemName}} </td>
+  </ng-container>
+
+  <!-- category Column -->
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef>Category</th>
+    <td mat-cell *matCellDef="let payments"> {{items[0][0].catagory}} </td>
+  </ng-container>
+
+  <!-- quantity Column -->
+  <ng-container matColumnDef="quantity">
+    <th mat-header-cell *matHeaderCellDef>Quantity</th>
+    <td mat-cell *matCellDef="let payments"> {{items[0][0].quantity}} </td>
+  </ng-container>
+
+  <!-- amount Column -->
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef>Amount</th>
+    <td mat-cell *matCellDef="let payments"> {{items[0][0].amount}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
