@@ -1,3 +1,36 @@
-<p>
-  pay-pending works!
-</p>
+ <div class="example-container">
+
+    <div class="container">
+      <h4>OrderID : {{orderID}}</h4>
+    </div>
+
+    <!--supplier select-->
+    <mat-form-field>
+      <mat-select placeholder="Supplier">
+        <mat-option *ngFor="let supplier of suppliers">
+          {{supplier.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <!--bank account select-->
+    <mat-form-field>
+      <mat-select placeholder="Bank Account">
+        <mat-option *ngFor="let bank of banks">
+          {{bank.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <br>
+    <ng-container>
+      <input matInput type="number" placeholder="Amount" min="0" name="amount" id="amount">
+    </ng-container>
+    <br>
+    <br>
+    <div class="button-row">
+      <button id="btnLeft" mat-raised-button class="btn btn-success" (click)="onSubmit()">Pay now</button>
+      <button id="btnRight" mat-raised-button class="btn btn-danger" routerLink="/auth/payment/payPending">Cancel</button>
+    </div>
+
+  </div>
