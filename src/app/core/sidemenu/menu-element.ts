@@ -202,6 +202,35 @@ export const menus = [
         ]
 
     },
+
+    {
+        'name': 'Supplier',
+        'icon': 'list',
+        'link': false,
+        'open': false,
+        'chip': false,
+        'sub': [
+            {
+                'name': 'Add Supplier',
+                'icon': 'filter_list',
+                'link': 'supplier/add-supplier',
+                'open': false,
+            },
+            {
+                'name': 'Get Supplier',
+                'icon': 'filter_list',
+                'link': 'supplier/get-supplier',
+                'open': false,
+            },
+            {
+                'name': 'Supplier Setting',
+                'icon': 'filter_list',
+                'link': 'supplier/supplier-setting',
+                'open': false,
+            }
+        ]
+
+    },
     // {
     //     'name': 'Guarded Routes',
     //     'icon': 'mode_edit',

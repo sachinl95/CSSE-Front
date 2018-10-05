@@ -3,73 +3,58 @@
     Add Supplier
   </h3>
 
-  <form>
-          <div class="example-container">
-            <form>
+            <form #supplierCreate="ngForm" novalidate>
               <div class="example-container">
   
                       <mat-form-field>  
-                              <input   matInput placeholder="Supplier Name" type="text">  
+                              <input   matInput placeholder="Supplier Name" name="supplierName" [(ngModel)]="supplier.supplierName" 
+                              #supplierName="ngModel"  type="text" required>  
                       </mat-form-field>
-                      <mat-error>  
-                              <span>Please enter Quentity</span>  
-                      </mat-error>
-  
-                      <mat-form-field>
-                              <input matInput type="date" placeholder="Bank Account" >
-                             
-                      </mat-form-field>
-                      <mat-error>  
-                              <span >Please select Date</span>  
-                      </mat-error>
-  
-                      <mat-form-field>
-                              <input matInput type="text" placeholder="NIC" >
-                             
-                      </mat-form-field>
-                      <mat-error>  
-                              <span >Please select Date</span>  
-                      </mat-error>
-
-                      <mat-form-field>
-                        <input matInput type="text" placeholder="Address" >
-                       
-                      </mat-form-field>
-                      <mat-error>  
-                        <span >Please select Date</span>  
-                      </mat-error>
-
-                      <mat-form-field>
-                        <input matInput type="text" placeholder="Email" >
-                       
-                      </mat-form-field>
-                      <mat-error>  
-                        <span >Please select Date</span>  
-                      </mat-error>
-
-                      <mat-form-field>
-                        <input matInput type="text" placeholder="Contact" >
-                       
-                      </mat-form-field>
-                      <mat-error>  
-                        <span >Please select Date</span>  
-                      </mat-error>
-
-                      <mat-form-field>
-                        <input matInput type="text" placeholder="Item" >
-                       
-                      </mat-form-field>
-                      <mat-error>  
-                        <span >Please select Date</span>  
-                      </mat-error>
-          
+                      <div class="alert alert-danger" *ngIf="supplierName.touched && !supplierName.valid">Name Required</div>
                       
-          
-                      <button mat-raised-button color="accent">Submit</button>
+                      <mat-form-field>
+                          <input matInput type="text" placeholder="NIC" name="nic" [(ngModel)]="supplier.nic" 
+                          #nic="ngModel" required>
+                      </mat-form-field>
+                      <div class="alert alert-danger" *ngIf="nic.touched && !nic.valid">NIC Required</div>
+
+                      <mat-form-field>
+                              <input matInput type="text" placeholder="Bank Account Number" name="bankAccount" [(ngModel)]="supplier.bankAccount" 
+                              #bankAccount="ngModel" required>
+                      </mat-form-field>
+                      <div class="alert alert-danger" *ngIf="bankAccount.touched && !bankAccount.valid">Bank Account Number Required</div>
+  
+                      <mat-form-field>
+                        <input matInput type="text" placeholder="Address" name="address" [(ngModel)]="supplier.address" 
+                        #address="ngModel" required>
+                       <div class="alert alert-danger" *ngIf="address.touched && !address.valid">Address Required</div>
+                      </mat-form-field>
+
+                      <mat-form-field>
+                        <input matInput type="text" placeholder="Email" name="email" [(ngModel)]="supplier.email" 
+                        #email="ngModel" required>
+                       <div class="alert alert-danger" *ngIf="email.touched && !email.valid">Email Required</div>
+                      </mat-form-field>
+                      
+                      <mat-form-field>
+                        <input matInput type="text" placeholder="Phone number" name="phone" [(ngModel)]="supplier.phone"
+                        #phone="ngModel" required>
+                       <div class="alert alert-danger" *ngIf="phone.touched && !phone.valid">Phone Number Required</div>
+                      </mat-form-field>
+                    
+
+                      <mat-form-field>
+                        <input matInput type="text" placeholder="Items" name="items"  [(ngModel)]="supplier.items" 
+                        #items="ngModel" required>
+                       <div class="alert alert-danger" *ngIf="items.touched && !items.valid">Item Required</div>
+                      </mat-form-field>
+                     
+                      
+                      <div class="row action-btn">
+                        <button md-raised-button type="submit" class="btn btn-rose" (click)="register(CreateSupervisorForm)">REGISTER</button>
+                      </div>
   
               </div>
       </form>
-          </div>
-  </form>
 
 </mat-card>
