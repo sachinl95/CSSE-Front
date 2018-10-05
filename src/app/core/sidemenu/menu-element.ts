@@ -161,12 +161,12 @@ export const menus = [
         'open': false,
         'chip': false,
         'sub': [
-            {
-                'name': 'Manage Approval',
-                'icon': 'work',
-                'link': 'payment/manageApproval',
-                'open': false,
-            },
+            // {
+            //     'name': 'Manage Approval',
+            //     'icon': 'work',
+            //     'link': 'payment/manageApproval',
+            //     'open': false,
+            // },
             // {
             //     'name': 'Suppliers',
             //     'icon': 'filter_center_focus',

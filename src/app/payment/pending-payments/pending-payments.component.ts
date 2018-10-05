@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { MatTableDataSource, MatSort } from '@angular/material';
 import { Payment } from '../../models/payment';
 import { PendingPaymentsService } from './pending-payments.service';
+import { PaymentSharedService } from '../payment-shared.service';
 
 @Component({
   selector: 'app-pending-payments',
@@ -13,7 +14,7 @@ export class PendingPaymentsComponent implements OnInit {
   public payments: Payment[];
   dataSource = new MatTableDataSource<Payment>(this.payments);
   @ViewChild(MatSort) sort: MatSort;
-  constructor(private pendingPaymentsService: PendingPaymentsService, private changeDetectorRefs: ChangeDetectorRef) {
+  constructor(private pendingPaymentsService: PendingPaymentsService, private changeDetectorRefs: ChangeDetectorRef, private paymentSharedService: PaymentSharedService) {
 
   }
   ngOnInit() {
@@ -24,26 +25,27 @@ export class PendingPaymentsComponent implements OnInit {
     this.pendingPaymentsService.getPendingPayments()
       .subscribe(
         (data: any) => {
-            this.payments = data ;
-            console.log(this.payments);
-            this.dataSource = new MatTableDataSource<Payment>(this.payments);
-            this.dataSource.sort = this.sort; // sort
-            this.changeDetectorRefs.detectChanges();
-            //console.log("dasrc:",this.dataSource);
+          this.payments = data;
+          console.log(this.payments);
+          this.dataSource = new MatTableDataSource<Payment>(this.payments);
+          this.dataSource.sort = this.sort; // sort
+          this.changeDetectorRefs.detectChanges();
+          //console.log("dasrc:",this.dataSource);
 
         }
       );
 
   }
 
-  displayedColumns: string[] = ['orderID', 'order_Date', 'amount', 'view','pay'];
+  displayedColumns: string[] = ['orderID', 'order_Date', 'amount', 'view', 'pay'];
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  getRecord(row){
+  getRecord(row) {
     console.log(row);
+    this.paymentSharedService.saveOrderID(row);
   }
 
 }

@@ -13,7 +13,7 @@ import { PayPendingComponent } from './pay-pending/pay-pending.component';
 import { PendingPaymentsComponent } from './pending-payments/pending-payments.component';
 import { SuccessfullPaymentsComponent } from './successfull-payments/successfull-payments.component';
 import { ViewOrderComponent } from './view-order/view-order.component';
-import {MatTableDataSource,MatFormFieldModule,MatTableModule, MatButtonModule} from '@angular/material';
+import {MatTableDataSource,MatFormFieldModule,MatTableModule, MatButtonModule, MatOptionModule, MatSelectModule} from '@angular/material';
 import {CdkTableModule} from '@angular/cdk/table';
 
 
@@ -29,9 +29,12 @@ export function highlightJsFactory(): any {
     MatFormFieldModule,
     CdkTableModule,
     MatTableModule,
+    MatOptionModule,
+    MatSelectModule,
     HighlightJsModule.forRoot({
       provide: HIGHLIGHT_JS,
       useFactory: highlightJsFactory,
+
       
     }),
     MaterialWidgetsRouterModule,
