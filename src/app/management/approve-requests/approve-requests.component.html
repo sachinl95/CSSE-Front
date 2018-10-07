@@ -1,0 +1,58 @@
+<mat-card>
+  <h1 class="center-text">
+    Approve Material Requests
+  </h1>
+  <h3 class="center-text">(Approved requests will be sent for ordering)</h3>
+
+  <ng-container class="col-md-12">
+
+
+  </ng-container>
+  <mat-grid-list cols="2" rowHeight="8:1">
+    <mat-grid-tile>
+      <div class="col-md-6">
+        <form class="example-form">
+          <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+          </mat-form-field>
+        </form>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <!-- <div class="col-md-6">
+        <button mat-raised-button (click)="goToRequestPurchase()">Approve a Material Request</button>
+      </div> -->
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="approved" value="false">
+        <mat-button-toggle value="false" (click)="refresh(false)">Unapproved Requests</mat-button-toggle>
+        <mat-button-toggle value="true" (click)="refresh(true)">Approved Requests</mat-button-toggle>
+      </mat-button-toggle-group>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="requestId">
+      <th mat-header-cell *matHeaderCellDef> Request ID </th>
+      <td mat-cell *matCellDef="let unapprovedRequest"> {{unapprovedRequest.requestId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="itemName">
+      <th mat-header-cell *matHeaderCellDef> Item Name </th>
+      <td mat-cell *matCellDef="let unapprovedRequest"> {{unapprovedRequest.itemName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="qty">
+      <th mat-header-cell *matHeaderCellDef> Quantity </th>
+      <td mat-cell *matCellDef="let unapprovedRequest"> {{unapprovedRequest.qty}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="approve">
+      <th mat-header-cell *matHeaderCellDef> Approve </th>
+      <td mat-cell *matCellDef="let unapprovedRequest"> <button mat-flat-button color="primary" (click)="approve(unapprovedRequest)">Approve</button> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>

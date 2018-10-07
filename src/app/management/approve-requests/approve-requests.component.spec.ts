@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ApprovedRequestsComponent } from './approved-requests.component';
+import { ApprovedRequestsComponent } from './approve-requests.component';
 
 describe('ApprovedRequestsComponent', () => {
   let component: ApprovedRequestsComponent;

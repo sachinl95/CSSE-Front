@@ -16,7 +16,7 @@ export const appRoutes: Routes = [{
         { path: 'management/policies', loadChildren: '../management/policies/policies.module#PoliciesModule' },
         { path: 'management/policy', loadChildren: '../management/policy/policy.module#PolicyModule' },
         { path: 'management/policy/:policyId', loadChildren: '../management/policy/policy.module#PolicyModule' },
-        { path: 'management/approved-requests', loadChildren: '../management/approved-requests/approved-requests.module#ApprovedRequestsModule' },
+        { path: 'management/approve-requests', loadChildren: '../management/approve-requests/approve-requests.module#ApproveRequestsModule' },
         { path: 'management/request-purchases', loadChildren: '../management/request-purchases/request-purchases.module#RequestPurchasesModule' }
     ]
 }];
