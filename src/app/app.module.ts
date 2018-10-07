@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+//import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LazyLoadModule } from './lazy-load/lazy-load.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,16 +16,27 @@ import { SuccessfullPaymentsService } from './payment/successfull-payments/succe
 import { PaymentSharedService } from './payment/payment-shared.service';
 import { ViewOrderService } from './payment/view-order/view-order.service';
 
+//import { PendingOrderComponent } from './pending-order/pending-order.component';
+//import { RejectOrderComponent } from './reject-order/reject-order.component';
+//import { ApprovedOrderComponent } from './approved-order/approved-order.component';
+//import { MyNotificationComponent } from './my-notification/my-notification.component';
+//import { OderSettingComponent } from './oder-setting/oder-setting.component'; 
+//import { AddOrderComponent } from './add-order/add-order.component';
+
+
 
 @NgModule({
   declarations: [
+
     AppComponent,
     ViewPendingOrdersComponent
     
     
   ],
   imports: [
+
     BrowserModule,
+    HttpClientModule,
     LazyLoadModule,
     CoreModule,
     BrowserAnimationsModule,
@@ -42,5 +53,6 @@ import { ViewOrderService } from './payment/view-order/view-order.service';
     PaymentSharedService,
     ViewOrderService],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
