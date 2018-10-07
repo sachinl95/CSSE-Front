@@ -58,17 +58,17 @@
     </ng-container>
 
     <ng-container matColumnDef="items">
-      <th mat-header-cell *matHeaderCellDef> Contact No. </th>
+      <th mat-header-cell *matHeaderCellDef> Items </th>
       <td mat-cell *matCellDef="let supplier" (click)="goToModifySupplier(supplier.supplierId)"> {{supplier.items}}</td>
     </ng-container>
 
     <ng-container matColumnDef="available">
-      <th mat-header-cell *matHeaderCellDef> Contact No. </th>
+      <th mat-header-cell *matHeaderCellDef> Available </th>
       <td mat-cell *matCellDef="let supplier" (click)="goToModifySupplier(supplier.supplierId)"> {{supplier.available}}</td>
     </ng-container>
 
     <ng-container matColumnDef="blacklisted">
-      <th mat-header-cell *matHeaderCellDef> Contact No. </th>
+      <th mat-header-cell *matHeaderCellDef> Blacklisted </th>
       <td mat-cell *matCellDef="let supplier" (click)="goToModifySupplier(supplier.supplierId)"> {{supplier.blacklisted}}</td>
     </ng-container>
 
