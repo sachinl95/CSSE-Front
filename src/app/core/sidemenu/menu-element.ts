@@ -6,6 +6,42 @@ export const menus = [
         'chip': false,
         'open': true
     },
+    
+
+    /** Start Request Material
+     *  Request Material
+     * 
+     */
+    {
+        'name': 'Request Material',
+        'icon': 'money',
+        'link': false,
+        'open': false,
+        'chip': false,
+        'sub': [
+
+            {
+                'name': 'Add Request',
+                'icon': 'payment',
+                'link': 'request/material-request',
+                'open': false,
+            },
+            {
+                'name': 'Get Request',
+                'icon': 'beenhere',
+                'link': 'request/get-request',
+                'open': false,
+            },
+
+
+        ]
+
+    },
+
+    /**
+     *  End of Request Material.
+     */
+
     {
         'name': 'Constructor',
         'icon': 'widgets',
@@ -44,18 +80,7 @@ export const menus = [
         'open': false,
         'chip': false,
         'sub': [
-            // {
-            //     'name': 'Manage Approval',
-            //     'icon': 'work',
-            //     'link': 'payment/manageApproval',
-            //     'open': false,
-            // },
-            // {
-            //     'name': 'Suppliers',
-            //     'icon': 'filter_center_focus',
-            //     'link': 'payment/payPending',
-            //     'open': false,
-            // },
+
             {
                 'name': 'Pending Payments',
                 'icon': 'payment',
@@ -73,6 +98,11 @@ export const menus = [
         ]
 
     },
+
+    /** Start site Manager
+     *  Site Manager
+     * 
+     */
     {
         'name': 'Site Manager',
         'icon': 'view_module',
@@ -124,8 +154,13 @@ export const menus = [
             }
 
         ]
-    }
-    , {
+    },
+
+    /**
+     *  End Site Manager.
+     */
+
+     {
         'name': 'Supplier',
         'icon': 'content_copy',
         'open': false,

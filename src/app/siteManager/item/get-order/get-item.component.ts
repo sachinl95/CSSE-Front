@@ -45,7 +45,5 @@ export class GetItemComponent implements OnInit {
   displayedColumns: string[] = ['sequential', 'items','orderDate']
   dataSource = new MatTableDataSource(this.orders)
 
-  goToModify() {
 
-  }
 }

@@ -19,5 +19,7 @@ export const appRoutes: Routes = [{
         { path: 'management/approved-requests', loadChildren: '../management/approved-requests/approved-requests.module#ApprovedRequestsModule' },
         { path: 'management/request-purchases', loadChildren: '../management/request-purchases/request-purchases.module#RequestPurchasesModule' },
         { path: 'siteManager', loadChildren: '../siteManager/item/material-widgets.module#MaterialWidgetsModule' },
+        { path: 'request', loadChildren: '../request/material-widgets.module#MaterialWidgetsModule' },
+
     ]
 }];

@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { LazyLoadModule } from './lazy-load/lazy-load.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
-// import { SearchOrderComponent } from './constructor/search-order/search-order.component';
 import { MatTableModule, MatFormFieldModule, MatButtonModule, MatSelect, MatSelectModule, MatOptionModule } from '@angular/material';
 import { ViewPendingOrdersComponent } from './supplier/view-pending-orders/view-pending-orders.component';
 import { HttpModule } from '@angular/http';
@@ -15,15 +14,8 @@ import { SuccessfullPaymentsComponent } from './payment/successfull-payments/suc
 import { SuccessfullPaymentsService } from './payment/successfull-payments/successfull-payments.service';
 import { PaymentSharedService } from './payment/payment-shared.service';
 import { ViewOrderService } from './payment/view-order/view-order.service';
-import { RequestMaterialComponent } from './request-material/request-material.component';
-//import { OrderSettingComponent } from './order-setting/order-setting.component';
 
-//import { PendingOrderComponent } from './pending-order/pending-order.component';
-//import { RejectOrderComponent } from './reject-order/reject-order.component';
-//import { ApprovedOrderComponent } from './approved-order/approved-order.component';
-//import { MyNotificationComponent } from './my-notification/my-notification.component';
-//import { OderSettingComponent } from './oder-setting/oder-setting.component'; 
-//import { AddOrderComponent } from './add-order/add-order.component';
+
 
 
 
@@ -31,9 +23,7 @@ import { RequestMaterialComponent } from './request-material/request-material.co
   declarations: [
 
     AppComponent,
-    ViewPendingOrdersComponent,
-    RequestMaterialComponent
-    
+    ViewPendingOrdersComponent, 
   ],
   imports: [
 
