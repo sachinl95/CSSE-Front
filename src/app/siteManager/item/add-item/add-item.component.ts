@@ -11,7 +11,9 @@ export class AddItemComponent implements OnInit {
 
 
   //name = new FormControl('');
-  regiForm: FormGroup;  
+  regiForm: FormGroup; 
+  
+
   itemName:string='';
   categoryId:string=''; 
   price:number=null;
@@ -64,15 +66,6 @@ export class AddItemComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  
-
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
-  ];
-
 
 }
 

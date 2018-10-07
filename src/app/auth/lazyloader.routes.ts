@@ -7,6 +7,9 @@ export const appRoutes: Routes = [{
         { path: 'dashboard', component: DashboardCrmComponent },
       //  { path: 'constructor', loadChildren: '../material-widgets/material-widgets.module#MaterialWidgetsModule' },
         { path: 'constructor', loadChildren: '../constructor/material-widgets.module#MaterialWidgetsModule' },
+        { path: 'siteManager', loadChildren: '../siteManager/item/material-widgets.module#MaterialWidgetsModule' },
+       // { path: 'siteManager1', loadChildren: '../siteManager/order/material-widgets.module#MaterialWidgetsModule' },
+
         { path: 'tables', loadChildren: '../tables/tables.module#TablesModule' },
         { path: 'maps', loadChildren: '../maps/maps.module#MapsModule' },
         { path: 'charts', loadChildren: '../charts/charts.module#ChartsModule' },

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GetItemComponent } from './get-item.component';
+import { OderSettingComponent } from './oder-setting.component';
 
-describe('GetItemComponent', () => {
-  let component: GetItemComponent;
-  let fixture: ComponentFixture<GetItemComponent>;
+describe('OderSettingComponent', () => {
+  let component: OderSettingComponent;
+  let fixture: ComponentFixture<OderSettingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GetItemComponent ]
+      declarations: [ OderSettingComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GetItemComponent);
+    fixture = TestBed.createComponent(OderSettingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
