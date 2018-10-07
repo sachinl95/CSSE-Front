@@ -13,6 +13,10 @@ export class SupplierServiceService {
       return this.http.post(constants.HOME_URL+"suppliers",suppiervisor);
   }
 
+  getSupplier(){
+    return this.http.get(constants.HOME_URL+"suppliers");
+  }
+
 
 
 }
