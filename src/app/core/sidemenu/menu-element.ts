@@ -155,48 +155,48 @@ export const menus = [
     // //                     }
     // //                 ]
     // // },
-    // {
-    //     'name': 'Payment',
-    //     'icon': 'money',
-    //     'link': false,
-    //     'open': false,
-    //     'chip': false,
-    //     'sub': [
-    //         {
-    //             'name': 'Manage Approval',
-    //             'icon': 'work',
-    //             'link': 'payment/manageApproval',
-    //             'open': false,
-    //         },
-    //         // {
-    //         //     'name': 'Suppliers',
-    //         //     'icon': 'filter_center_focus',
-    //         //     'link': 'payment/payPending',
-    //         //     'open': false,
-    //         // },
-    //         {
-    //             'name': 'Pending Payments',
-    //             'icon': 'payment',
-    //             'link': 'payment/pendingPayments',
-    //             'open': false,
-    //         },
-    //         {
-    //             'name': 'Successfull Payments',
-    //             'icon': 'beenhere',
-    //             'link': 'payment/sucessfullPayments',
-    //             'open': false,
-    //         },
-    //         // {
-    //         //     'name': 'Employees',
-    //         //     'icon': 'filter_center_focus',
-    //         //     'link': 'payment/viewOrders',
-    //         //     'open': false,
-    //         // },
+    {
+        'name': 'Payment',
+        'icon': 'money',
+        'link': false,
+        'open': false,
+        'chip': false,
+        'sub': [
+            {
+                'name': 'Manage Approval',
+                'icon': 'work',
+                'link': 'payment/manageApproval',
+                'open': false,
+            },
+            // {
+            //     'name': 'Suppliers',
+            //     'icon': 'filter_center_focus',
+            //     'link': 'payment/payPending',
+            //     'open': false,
+            // },
+            {
+                'name': 'Pending Payments',
+                'icon': 'payment',
+                'link': 'payment/pendingPayments',
+                'open': false,
+            },
+            {
+                'name': 'Successfull Payments',
+                'icon': 'beenhere',
+                'link': 'payment/sucessfullPayments',
+                'open': false,
+            },
+            // {
+            //     'name': 'Employees',
+            //     'icon': 'filter_center_focus',
+            //     'link': 'payment/viewOrders',
+            //     'open': false,
+            // },
 
             
-    //     ]
+        ]
 
-    // },
+    },
     // {
     //     'name': 'Guarded Routes',
     //     'icon': 'mode_edit',
