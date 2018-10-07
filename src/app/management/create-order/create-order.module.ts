@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RequestPurchasesComponent } from './request-purchases.component';
+import { RequestPurchasesComponent } from './create-order.component';
 import { Routes, RouterModule } from '@angular/router';
 import { DndModule } from 'ng2-dnd';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatTableModule, MatFormFieldModule, MatInputModule,
      MatButtonModule, MatGridListModule, MatSelectModule, MatOptionModule,
-     MatIconModule} from '@angular/material';
+     MatIconModule,MatButtonToggleModule} from '@angular/material';
 import {
     MatToolbarModule,
     MatListModule,
@@ -33,8 +33,9 @@ export const ROUTES: Routes = [
         MatGridListModule,
         MatSelectModule,
         MatOptionModule,
-        MatIconModule
+        MatIconModule,
+        MatButtonToggleModule
     ],
     declarations: [RequestPurchasesComponent]
 })
-export class RequestPurchasesModule { }
+export class CreateOrderModule { }

@@ -17,6 +17,6 @@ export const appRoutes: Routes = [{
         { path: 'management/policy', loadChildren: '../management/policy/policy.module#PolicyModule' },
         { path: 'management/policy/:policyId', loadChildren: '../management/policy/policy.module#PolicyModule' },
         { path: 'management/approve-requests', loadChildren: '../management/approve-requests/approve-requests.module#ApproveRequestsModule' },
-        { path: 'management/request-purchases', loadChildren: '../management/request-purchases/request-purchases.module#RequestPurchasesModule' }
+        { path: 'management/create-order', loadChildren: '../management/create-order/create-order.module#CreateOrderModule' }
     ]
 }];

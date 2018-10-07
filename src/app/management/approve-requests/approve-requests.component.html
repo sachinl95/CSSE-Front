@@ -19,12 +19,9 @@
       </div>
     </mat-grid-tile>
     <mat-grid-tile>
-      <!-- <div class="col-md-6">
-        <button mat-raised-button (click)="goToRequestPurchase()">Approve a Material Request</button>
-      </div> -->
       <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="approved" value="false">
-        <mat-button-toggle value="false" (click)="refresh(false)">Unapproved Requests</mat-button-toggle>
-        <mat-button-toggle value="true" (click)="refresh(true)">Approved Requests</mat-button-toggle>
+        <mat-button-toggle value="false" (click)="refresh()">Unapproved Requests</mat-button-toggle>
+        <mat-button-toggle value="true" (click)="refresh()">Approved Requests</mat-button-toggle>
       </mat-button-toggle-group>
     </mat-grid-tile>
   </mat-grid-list>

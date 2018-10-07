@@ -153,7 +153,7 @@ export const menus = [
             {
                 name: 'Materials Requests', icon: 'work', open: false, link: false, sub: [
                     { name: 'Approve Requests', icon: 'work', open: false, link: 'management/approve-requests' },
-                    { name: 'Create Order', icon: 'work', open: false, link: 'management/request-purchases' },
+                    { name: 'Create Order', icon: 'work', open: false, link: 'management/create-order' },
                 ]
             },
             { name: 'Business Policies', icon: 'work', open: false, link: 'management/policies' },
