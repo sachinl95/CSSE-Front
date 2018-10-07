@@ -19,5 +19,9 @@ export const appRoutes: Routes = [{
         { path: 'management/approved-requests', loadChildren: '../management/approved-requests/approved-requests.module#ApprovedRequestsModule' },
         { path: 'management/request-purchases', loadChildren: '../management/request-purchases/request-purchases.module#RequestPurchasesModule' },
         { path: 'siteManager', loadChildren: '../siteManager/item/material-widgets.module#MaterialWidgetsModule' },
+        { path: 'procument-staff/site', loadChildren: '../procument-staff/site/site.module#SiteModule' },
+        { path: 'procument-staff/material', loadChildren: '../procument-staff/material/material.module#materialModule' },
+        { path: 'procument-staff/site-manager', loadChildren: '../procument-staff/site-manager/site-manager.module#siteManagerModule' },
+        { path: 'procument-staff/blacklist', loadChildren: '../procument-staff/blacklist/blacklist.module#blacklistModule' },
     ]
 }];

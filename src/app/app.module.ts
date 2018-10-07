@@ -14,7 +14,7 @@ import { PendingPaymentsService } from './payment/pending-payments/pending-payme
 import { SuccessfullPaymentsComponent } from './payment/successfull-payments/successfull-payments.component';
 import { SuccessfullPaymentsService } from './payment/successfull-payments/successfull-payments.service';
 import { PaymentSharedService } from './payment/payment-shared.service';
-import { ViewOrderService } from './payment/view-order/view-order.service';
+import { ViewOrderService } from './payment/view-order/view-order.service'; 
 
 //import { PendingOrderComponent } from './pending-order/pending-order.component';
 //import { RejectOrderComponent } from './reject-order/reject-order.component';
