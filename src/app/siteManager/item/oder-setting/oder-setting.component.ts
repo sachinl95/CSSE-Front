@@ -11,22 +11,22 @@ import {orderModel} from '../../../model/order';
 })
 export class OderSettingComponent implements OnInit {
 
-  order:orderModel;
-  displayedColumns: string[] = ['Id', 'ItemName', 'CategoryId' , 'Price', 'deliveryInformation'];
+  //order:orderModel;
+  //displayedColumns: string[] = ['Id', 'ItemName', 'CategoryId' , 'Price', 'deliveryInformation'];
 
   constructor(private orderervice:OrderServiceService) { }
   dataSource = new MatTableDataSource();
 
   ngOnInit() {
 
-    this.order = new orderModel;
-    this.orderervice.getAllOrders().subscribe(
-      (data:any) => {
-        console.log(data);
-        const Orders : Order[] = data;
-        this.dataSource = new MatTableDataSource(Orders);
-      }
-    )
+    // this.order = new orderModel;
+    // this.orderervice.getAllOrders().subscribe(
+    //   (data:any) => {
+    //     console.log(data);
+    //     const Orders : Order[] = data;
+    //     this.dataSource = new MatTableDataSource(Orders);
+    //   }
+    // )
 
   }
 
