@@ -9,7 +9,9 @@ import { AddItemComponent } from './add-item/add-item.component';
 import { ItemSettingComponent } from './item-setting/item-setting.component';
 import {AddOrderComponent} from './add-order/add-order.component';
 import {} from '@angular/material/datepicker' 
-import { MatPaginatorModule,MatSelectModule} from '@angular/material';
+import { MatPaginatorModule,MatSelectModule, MatIconModule, MatGridTile,
+  MatButtonModule, MatGridListModule, MatOptionModule,
+} from '@angular/material';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {OderSettingComponent} from './oder-setting/oder-setting.component';
 import {MyNotificationComponent} from './my-notification/my-notification.component';
@@ -62,7 +64,9 @@ export function highlightJsFactory(): any {
       useFactory: highlightJsFactory,
     }),
     MaterialWidgetsRouterModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule, MatGridListModule, MatOptionModule
   ],
 
   declarations: [

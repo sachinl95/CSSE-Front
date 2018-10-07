@@ -1,60 +1,56 @@
 <mat-card>
   <h3 class="center-text">
-    View Orders 
+    View Orders
   </h3>
 
   <ng-container class="col-md-12">
-      <div class="center-text">
-        <form class="example-form">
-          <mat-form-field>
-            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
-          </mat-form-field>
-        </form>
-      </div>
+    <div class="center-text">
+      <form class="example-form">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+        </mat-form-field>
+      </form>
+    </div>
   </ng-container>
 
   <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
 
-    <ng-container matColumnDef="Id">
-        <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
-        <mat-cell *matCellDef="let lesson"></mat-cell>
-        
-    </ng-container>
-
-    <ng-container matColumnDef="ItemName">
-        <mat-header-cell *matHeaderCellDef>ItemName</mat-header-cell>
-        <mat-cell class="description-cell"
-                  *matCellDef="let lesson"></mat-cell>
+    <ng-container matColumnDef="sequential">
+      <mat-header-cell *matHeaderCellDef>Sequential</mat-header-cell>
+      <mat-cell *matCellDef="let order">{{order.sequential}}</mat-cell>
 
     </ng-container>
 
-    <ng-container matColumnDef="CategoryId">
-        <mat-header-cell *matHeaderCellDef>CategoryId</mat-header-cell>
-        <mat-cell class="duration-cell"
-                  *matCellDef="let lesson"></mat-cell>
+    <ng-container matColumnDef="items">
+      <mat-header-cell *matHeaderCellDef>items</mat-header-cell>
+      <mat-cell class="description-cell" *matCellDef="let order">{{order.items}}</mat-cell>
+
     </ng-container>
 
+    <ng-container matColumnDef="orderDate">
+      <mat-header-cell *matHeaderCellDef>Order Date</mat-header-cell>
+      <mat-cell class="duration-cell" *matCellDef="let order">{{order.orderDate.substr(5)}}</mat-cell>
+    </ng-container>
+<!--
     <ng-container matColumnDef="Price">
       <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
-      <mat-cell class="duration-cell"
-                *matCellDef="let lesson"></mat-cell>
+      <mat-cell class="duration-cell" *matCellDef="let lesson"></mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="deliveryInformation">
       <mat-header-cell *matHeaderCellDef>DeliveryInformation</mat-header-cell>
-      <mat-cell class="duration-cell"
-                *matCellDef="let lesson"></mat-cell>
+      <mat-cell class="duration-cell" *matCellDef="let lesson"></mat-cell>
     </ng-container>
+ -->
 
-    
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 
     <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
 
-    
-</mat-table>
-<br>
-<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+  </mat-table>
+  <br>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 
 
 </mat-card>

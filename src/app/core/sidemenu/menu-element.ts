@@ -116,6 +116,12 @@ export const menus = [
                 'link': 'siteManager/pending-order',
                 'open': false,
             },
+            {
+                'name': 'Order Setting',
+                'icon': 'filter_center_focus',
+                'link': 'siteManager/order-setting',
+                'open': false,
+            }
 
         ]
     }

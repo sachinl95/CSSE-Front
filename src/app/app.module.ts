@@ -15,6 +15,8 @@ import { SuccessfullPaymentsComponent } from './payment/successfull-payments/suc
 import { SuccessfullPaymentsService } from './payment/successfull-payments/successfull-payments.service';
 import { PaymentSharedService } from './payment/payment-shared.service';
 import { ViewOrderService } from './payment/view-order/view-order.service';
+import { RequestMaterialComponent } from './request-material/request-material.component';
+//import { OrderSettingComponent } from './order-setting/order-setting.component';
 
 //import { PendingOrderComponent } from './pending-order/pending-order.component';
 //import { RejectOrderComponent } from './reject-order/reject-order.component';
@@ -29,8 +31,8 @@ import { ViewOrderService } from './payment/view-order/view-order.service';
   declarations: [
 
     AppComponent,
-    ViewPendingOrdersComponent
-    
+    ViewPendingOrdersComponent,
+    RequestMaterialComponent
     
   ],
   imports: [
