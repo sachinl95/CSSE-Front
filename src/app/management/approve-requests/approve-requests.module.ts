@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ApprovedRequestsComponent } from './approved-requests.component';
+import { ApprovedRequestsComponent } from './approve-requests.component';
 import { Routes, RouterModule } from '@angular/router';
 import { DndModule } from 'ng2-dnd';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatTableModule, MatFormFieldModule, MatInputModule,
      MatButtonModule, MatGridListModule, MatSelectModule, MatOptionModule,
-     MatIconModule} from '@angular/material';
+     MatIconModule, MatButtonToggleModule} from '@angular/material';
 import {
     MatToolbarModule,
     MatListModule,
@@ -33,8 +33,9 @@ export const ROUTES: Routes = [
         MatGridListModule,
         MatSelectModule,
         MatOptionModule,
-        MatIconModule
+        MatIconModule,
+        MatButtonToggleModule
     ],
     declarations: [ApprovedRequestsComponent]
 })
-export class ApprovedRequestsModule { }
+export class ApproveRequestsModule { }

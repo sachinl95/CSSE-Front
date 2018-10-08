@@ -331,8 +331,8 @@ export const menus = [
             { name: 'Supplier Management', icon: 'work', open: false, link: 'management/suppliers' },
             {
                 name: 'Materials Requests', icon: 'work', open: false, link: false, sub: [
-                    { name: 'View Approved Requests', icon: 'work', open: false, link: 'management/approved-requests' },
-                    { name: 'Request Purchases', icon: 'work', open: false, link: 'management/request-purchases' },
+                    { name: 'Approve Requests', icon: 'work', open: false, link: 'management/approve-requests' },
+                    { name: 'Create Order', icon: 'work', open: false, link: 'management/create-order' },
                 ]
             },
             { name: 'Business Policies', icon: 'work', open: false, link: 'management/policies' },

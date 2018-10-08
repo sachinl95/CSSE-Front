@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RequestPurchasesComponent } from './request-purchases.component';
+import { RequestPurchasesComponent } from './create-order.component';
 
 describe('RequestPurchasesComponent', () => {
   let component: RequestPurchasesComponent;
