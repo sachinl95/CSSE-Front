@@ -32,4 +32,8 @@ export class BlacklistComponent implements OnInit {
   ngOnInit() {
   }
 
+  blackList(){
+    alert("Black List Suppler");
+  }
+
 }
