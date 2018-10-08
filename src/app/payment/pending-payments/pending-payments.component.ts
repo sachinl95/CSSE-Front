@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { MatTableDataSource, MatSort } from '@angular/material';
-import { Order } from '../../models/order';
+import { Order } from '../../model/order';
 import { PendingPaymentsService } from './pending-payments.service';
 import { PaymentSharedService } from '../payment-shared.service';
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { constant } from '../../_helpers/appConstatnts';
-import { Order } from '../../models/order';
+import { Order } from '../../model/order';
 import { HttpClient } from '@angular/common/http';
 
 
