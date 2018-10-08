@@ -4,20 +4,19 @@ import { MaterialWidgetsRouterModule }                                from './ma
 import * as hljs                                                      from 'highlight.js';
 import { HighlightJsModule, HIGHLIGHT_JS }                            from 'angular-highlight-js';
 import * as hljsTypescript                                            from 'highlight.js/lib/languages/typescript';
-import { GetItemComponent }                                              from './get-order/get-item.component';
-import { AddItemComponent } from './add-item/add-item.component';
-import { ItemSettingComponent } from './item-setting/item-setting.component';
-import {AddOrderComponent} from './add-order/add-order.component';
-import {} from '@angular/material/datepicker' 
-import { MatPaginatorModule,MatSelectModule, MatIconModule, MatGridTile,
+import {}                                                             from '@angular/material/datepicker' 
+import {GetRequestComponent} from './get-request/get-request.component';
+import 
+{ 
+
+  MatPaginatorModule,MatSelectModule, MatIconModule, MatGridTile,
   MatButtonModule, MatGridListModule, MatOptionModule,
+
 } from '@angular/material';
-import {FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {OderSettingComponent} from './oder-setting/oder-setting.component';
-import {MyNotificationComponent} from './my-notification/my-notification.component';
-import {ApprovedOrderComponent} from './approved-order/approved-order.component';
-import {RejectOrderComponent} from './reject-order/reject-order.component';
-import {PendingOrderComponent} from './pending-order/pending-order.component';
+
+import {FormsModule, ReactiveFormsModule }                            from '@angular/forms';
+import {MaterialRequestComponent}                                     from './material-request/material-request.component';
+
 import 
 { 
   MatTableModule,
@@ -31,10 +30,6 @@ import
 
 }                                                                     from '@angular/material';
 import {CdkTableModule}                                               from '@angular/cdk/table';
-//import {MatDatepicker} from '@angular/material/datepicker';
-
-
-
 
 export function highlightJsFactory(): any {
   hljs.registerLanguage('typescript', hljsTypescript);
@@ -70,16 +65,8 @@ export function highlightJsFactory(): any {
   ],
 
   declarations: [
-    GetItemComponent,
-    AddItemComponent,
-    ItemSettingComponent,
-    AddOrderComponent,
-    OderSettingComponent,
-    MyNotificationComponent,
-    ApprovedOrderComponent,
-    RejectOrderComponent,
-    PendingOrderComponent
-    
+    MaterialRequestComponent,
+    GetRequestComponent
     ],
 
 

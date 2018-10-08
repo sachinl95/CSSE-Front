@@ -23,5 +23,7 @@ export const appRoutes: Routes = [{
         { path: 'procument-staff/material', loadChildren: '../procument-staff/material/material.module#materialModule' },
         { path: 'procument-staff/site-manager', loadChildren: '../procument-staff/site-manager/site-manager.module#siteManagerModule' },
         { path: 'procument-staff/blacklist', loadChildren: '../procument-staff/blacklist/blacklist.module#blacklistModule' },
+        { path: 'request', loadChildren: '../request/material-widgets.module#MaterialWidgetsModule' },
+
     ]
 }];

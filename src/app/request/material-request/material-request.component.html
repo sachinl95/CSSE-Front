@@ -1,0 +1,32 @@
+<mat-card>
+  <h3 class="center-text">
+    Request Order 
+  </h3>
+  <div class="example-container">
+
+    <form #createRequest="ngForm"  novalidate>
+
+      <mat-form-field>  
+        <input matInput placeholder="Item Name" type="text" name="itemName" [(ngModel)]="request.itemName" 
+        #itemName="ngModel" required>  
+      </mat-form-field>
+      <mat-error>
+          <div class="alert alert-danger"  *ngIf="itemName.touched && !itemName.valid">Item Name Required</div>
+      </mat-error>
+      
+
+      <mat-form-field>  
+          <input  matInput placeholder="Quantity" type="text" name="qyt" [(ngModel)]="request.qty" 
+          #qty="ngModel"  required>  
+      </mat-form-field>
+      <mat-error>
+        <div class="alert alert-danger" *ngIf="qty.touched && !qty.valid">Quantity Required</div>
+      </mat-error>
+
+      
+        <input type="submit" class="btn btn-primary" value="Submit" (click)="onSubmit(createRequest)">
+        <input id="resetButton" type="button" class="btn btn-warning" value="Reset" (click)="ngOnInit()">
+
+    </form>  
+  </div>
+</mat-card>

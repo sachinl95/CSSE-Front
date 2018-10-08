@@ -6,27 +6,63 @@ export const menus = [
         'chip': false,
         'open': true
     },
-    // {
-    //     'name': 'Constructor',
-    //     'icon': 'widgets',
-    //     'link': false,
-    //     'open': false,
-    //     'sub': [
-    //         {
-    //             'name': 'Search Order',
-    //             'link': 'constructor/searchOrder',
-    //             'icon': 'indeterminate_check_box',
-    //             'chip': false,
-    //             'open': false,
-    //         },
-    //         {
-    //             'name': 'Add Order',
-    //             'link': 'material-widgets/list',
-    //             'icon': 'list',
-    //             'chip': false,
-    //             'open': false,
-    //         },
-    //         {
+    
+
+    /** Start Request Material
+     *  Request Material
+     * 
+     */
+    {
+        'name': 'Request Material',
+        'icon': 'money',
+        'link': false,
+        'open': false,
+        'chip': false,
+        'sub': [
+
+            {
+                'name': 'Add Request',
+                'icon': 'payment',
+                'link': 'request/material-request',
+                'open': false,
+            },
+            {
+                'name': 'Get Request',
+                'icon': 'beenhere',
+                'link': 'request/get-request',
+                'open': false,
+            },
+
+
+        ]
+
+    },
+
+    /**
+     *  End of Request Material.
+     */
+
+    {
+        'name': 'Constructor',
+        'icon': 'widgets',
+        'link': false,
+        'open': false,
+        'sub': [
+            {
+                'name': 'Search Order',
+                'link': 'constructor/searchOrder',
+                'icon': 'indeterminate_check_box',
+                'chip': false,
+                'open': false,
+            },
+            {
+                'name': 'Add Order',
+                'link': 'material-widgets/list',
+                'icon': 'list',
+                'chip': false,
+                'open': false,
+            },
+            {
 
     //             'name': 'View My Previous Orders',
     //             'link': 'material-widgets/stepper',
@@ -34,36 +70,30 @@ export const menus = [
     //             'chip': false,
     //             'open': false,
 
-    //         },
-    //         // {
-    //         //     'name': 'My Notifications',
-    //         //     'link': 'material-widgets/expansion',
-    //         //     'icon': 'web_aaset',
-    //         //     'chip': false,
-    //         //     'open': false,
-    //         // },
-    //         // {
-    //         //     'name': 'Progress Spinner',
-    //         //     'link': 'material-widgets/spinner',
-    //         //     'icon': 'cached',
-    //         //     'chip': false,
-    //         //     'open': false,
-    //         // },
-    //         // {
-    //         //     'name': 'Cards',
-    //         //     'link': 'material-widgets/cards',
-    //         //     'icon': 'crop_16_9',
-    //         //     'chip': false,
-    //         //     'open': false,
-    //         // },
-    //         // {
-    //         //     'name': 'Icons',
-    //         //     'link': 'material-widgets/icons',
-    //         //     'icon': 'gif',
-    //         //     'chip': false,
-    //         //     'open': false,
-    //         // },
-    //         // {
+            },
+        ]
+    },
+    {
+        'name': 'Payment',
+        'icon': 'money',
+        'link': false,
+        'open': false,
+        'chip': false,
+        'sub': [
+
+            {
+                'name': 'Pending Payments',
+                'icon': 'payment',
+                'link': 'payment/pendingPayments',
+                'open': false,
+            },
+            {
+                'name': 'Successfull Payments',
+                'icon': 'beenhere',
+                'link': 'payment/sucessfullPayments',
+                'open': false,
+            },
+        ]}, 
 
     //         //     'name': 'AutoComplete',
     //         //     'link': 'material-widgets/autocomplete',
@@ -209,6 +239,7 @@ export const menus = [
     //     'link': '/auth/scrumboard',
     //     'icon': 'grade',
     // },
+    
      {
         'name': 'Site Manager',
         'icon': 'view_module',
@@ -252,10 +283,21 @@ export const menus = [
                 'link': 'siteManager/pending-order',
                 'open': false,
             },
+            {
+                'name': 'Order Setting',
+                'icon': 'filter_center_focus',
+                'link': 'siteManager/order-setting',
+                'open': false,
+            }
 
         ]
-    }
-    , {
+    },
+
+    /**
+     *  End Site Manager.
+     */
+
+     {
         'name': 'Supplier',
         'icon': 'content_copy',
         'open': false,
