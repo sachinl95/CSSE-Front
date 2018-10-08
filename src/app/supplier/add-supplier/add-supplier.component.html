@@ -44,7 +44,7 @@
                     
 
                       <mat-form-field>
-                        <input matInput type="text" placeholder="Items" name="items"  [(ngModel)]="supplier.items" 
+                        <input matInput type="text" placeholder="Item" name="items"  [(ngModel)]="supplier.items" 
                         #items="ngModel" required>
                        <div class="alert alert-danger" *ngIf="items.touched && !items.valid">Item Required</div>
                       </mat-form-field>
