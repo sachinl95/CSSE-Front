@@ -1,11 +1,10 @@
-export class orderModel{
-    _id:string;
-    sequential:string;
-    items:string;
-    orderStatus:string;
-    quentity:number;
-    isDraftPurchaseOrder:Boolean;
-    onHold:Boolean;
-    orderDate:Date;
+export class Order{
+    orderID:string;
+    itemName:string;
+    requestId:string;
     supplierName:string;
+    quantity:string;
+    unitPrice:string;
+    orderDate:String;
+    paid:Boolean;
 }

@@ -28,11 +28,8 @@ export class ViewOrderComponent implements OnInit {
       .subscribe(
         (data: any) => {
             this.orders = data ;
-            this.orders.forEach(order => {
-              this.items.push(order.items);
-            });
             console.log(this.orders);
-            this.dataSource = new MatTableDataSource<any>(this.items);
+            this.dataSource = new MatTableDataSource<Order>(this.orders);
             this.dataSource.sort = this.sort; // sort
             this.changeDetectorRefs.detectChanges();
             //console.log("dasrc:",this.dataSource);

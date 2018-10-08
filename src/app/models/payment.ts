@@ -1,7 +1,7 @@
 export class Payment{
     orderId:string;
     supplierName:string;
-    date:String;
+    date:number;
     bankAccountNumber:string;
     amount:number;
     status:boolean;

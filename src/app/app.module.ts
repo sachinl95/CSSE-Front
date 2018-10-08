@@ -14,6 +14,7 @@ import { SuccessfullPaymentsComponent } from './payment/successfull-payments/suc
 import { SuccessfullPaymentsService } from './payment/successfull-payments/successfull-payments.service';
 import { PaymentSharedService } from './payment/payment-shared.service';
 import { ViewOrderService } from './payment/view-order/view-order.service'; 
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -38,7 +39,8 @@ import { ViewOrderService } from './payment/view-order/view-order.service';
     HttpModule,
     HttpClientModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    FormsModule
   ],
   providers: [PendingPaymentsService,
     SuccessfullPaymentsService,
