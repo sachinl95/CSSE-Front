@@ -1,3 +1,27 @@
-<p>
-  site-manager works!
-</p>
+<mat-card>
+    <div class="container">
+      <h5>Asign Site Manager To Site</h5>
+ <form autocomplete="off" #createSite="ngForm" novalidate>
+    <div class="row">
+      <mat-form-field>
+          <mat-select placeholder="Select Site">
+            <mat-option *ngFor="let site of sites" [value]="site.value">
+              {{site.viewValue}}
+            </mat-option>
+          </mat-select>  
+        </mat-form-field>
+        </div>
+      <div class="row">
+        <mat-form-field>
+            <mat-select placeholder="Select Site Manager">
+              <mat-option *ngFor="let sites of siteManager" [value]="sites.value">
+                {{sites.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="row"></div>
+        <button mat-raised-button class="btn btn-primary btn-round" type="submit" >Asign Site Manager</button>
+ </form>       
+    </div>      
+</mat-card>

@@ -1,32 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Site } from "../../model/site";
+import { NgForm } from "@angular/forms";
+import { SiteService } from "./site.service";
 
 @Component({
-  selector: 'app-site',
-  templateUrl: './site.component.html',
-  styleUrls: ['./site.component.scss']
+  selector: "app-site",
+  templateUrl: "./site.component.html",
+  styleUrls: ["./site.component.scss"]
 })
 export class SiteComponent implements OnInit {
-
-  constructor() { }
+  private site: Site;
+  constructor(private siteService:SiteService) {}
 
   ngOnInit() {
-    
+    this.site = new Site();
   }
 
-  openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+  onSubmit(form:NgForm){
+    if(form.valid){
+      this.siteService.postSite(this.site)
+      .subscribe(
+        (data:any)=>{
+          console.log(data);
+          alert("Site Registerd Successfully");
+        }
+      )
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-  
-
+  }
 }
