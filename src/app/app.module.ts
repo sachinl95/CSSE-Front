@@ -15,6 +15,7 @@ import { SuccessfullPaymentsComponent } from './payment/successfull-payments/suc
 import { SuccessfullPaymentsService } from './payment/successfull-payments/successfull-payments.service';
 import { PaymentSharedService } from './payment/payment-shared.service';
 import { ViewOrderService } from './payment/view-order/view-order.service'; 
+import { SiteService } from './procument-staff/site/site.service';
 
 //import { PendingOrderComponent } from './pending-order/pending-order.component';
 //import { RejectOrderComponent } from './reject-order/reject-order.component';
@@ -51,7 +52,7 @@ import { ViewOrderService } from './payment/view-order/view-order.service';
   providers: [PendingPaymentsService,
     SuccessfullPaymentsService,
     PaymentSharedService,
-    ViewOrderService],
+    ViewOrderService,SiteService],
   bootstrap: [AppComponent]
   
 })
