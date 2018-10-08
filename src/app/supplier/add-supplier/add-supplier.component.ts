@@ -23,6 +23,7 @@ export class AddSupplierComponent implements OnInit {
       this.supplierService.addSupplier(this.supplier).subscribe(
         (data:any) => {
           console.log(data.message);
+          alert(data.message);
         }
       )
     //}
