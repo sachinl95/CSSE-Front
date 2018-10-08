@@ -14,7 +14,10 @@ export class PayPendingService {
   {
     return this.httpclient.get(constant.HOME_URL + 'suppliers')
   }
-  makePayment(orderId){
-    return this.httpclient.put(constant.HOME_URL + 'payments/',orderId);
+  updateOrder(orderId){
+    return this.httpclient.put(constant.HOME_URL + 'orders/',orderId);
+  }
+  makePayment(payment){
+    return this.httpclient.post(constant.HOME_URL + 'payments',payment);
   }
 }

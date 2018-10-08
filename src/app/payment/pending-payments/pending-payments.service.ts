@@ -14,6 +14,6 @@ export class PendingPaymentsService {
 
   getPendingPayments()
   {
-    return this.httpclient.get(constant.HOME_URL + 'payments/pending')
+    return this.httpclient.get(constant.HOME_URL + 'orders/pending')
   }
 }

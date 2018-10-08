@@ -27,7 +27,9 @@ import
   MatListModule,
   MatCardModule,
   MatMenuModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  
+
 
 }                                                                     from '@angular/material';
 import {CdkTableModule}                                               from '@angular/cdk/table';
@@ -66,7 +68,8 @@ export function highlightJsFactory(): any {
     MaterialWidgetsRouterModule,
     MatTableModule,
     MatIconModule,
-    MatButtonModule, MatGridListModule, MatOptionModule
+    MatButtonModule, MatGridListModule, MatOptionModule,
+    FormsModule
   ],
 
   declarations: [

@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators ,FormsModule,NgForm } from '@angular
 import { OrderServiceService } from '../../service/order-service.service';
 import { ItemModel } from '../../../model/item';
 import { MatTableDataSource, MatPaginator, MatSort}       from '@angular/material';
-import {orderModel} from '../../../model/order';
+import {Order} from '../../../model/order';
 
 @Component({
   selector: 'app-add-order',
@@ -13,7 +13,7 @@ import {orderModel} from '../../../model/order';
 export class AddOrderComponent implements OnInit {
 
   orderForm:FormGroup;
-  order:orderModel;
+  order:Order;
   item : ItemModel;
 
   nameList : string[] = [];
@@ -34,7 +34,7 @@ export class AddOrderComponent implements OnInit {
   ngOnInit() {
 
     this.item = new ItemModel;
-    this.order = new orderModel;
+    this.order = new Order;
     //this.order = new PostItemModel;
   
     this.orderService.getItem().subscribe(

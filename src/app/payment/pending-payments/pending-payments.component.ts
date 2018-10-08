@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { MatTableDataSource, MatSort } from '@angular/material';
-import { Payment } from '../../models/payment';
+import { Order } from '../../models/order';
 import { PendingPaymentsService } from './pending-payments.service';
 import { PaymentSharedService } from '../payment-shared.service';
 
@@ -11,8 +11,8 @@ import { PaymentSharedService } from '../payment-shared.service';
 })
 export class PendingPaymentsComponent implements OnInit {
 
-  public payments: Payment[];
-  dataSource = new MatTableDataSource<Payment>(this.payments);
+  public orders: Order[];
+  dataSource = new MatTableDataSource<Order>(this.orders);
   @ViewChild(MatSort) sort: MatSort;
   constructor(private pendingPaymentsService: PendingPaymentsService, private changeDetectorRefs: ChangeDetectorRef, private paymentSharedService: PaymentSharedService) {
 
@@ -25,9 +25,9 @@ export class PendingPaymentsComponent implements OnInit {
     this.pendingPaymentsService.getPendingPayments()
       .subscribe(
         (data: any) => {
-          this.payments = data;
-          console.log(this.payments);
-          this.dataSource = new MatTableDataSource<Payment>(this.payments);
+          this.orders = data;
+          console.log(this.orders);
+          this.dataSource = new MatTableDataSource<Order>(this.orders);
           this.dataSource.sort = this.sort; // sort
           this.changeDetectorRefs.detectChanges();
           //console.log("dasrc:",this.dataSource);
@@ -46,6 +46,10 @@ export class PendingPaymentsComponent implements OnInit {
   getRecord(row) {
     console.log(row);
     this.paymentSharedService.saveOrderID(row);
+  }
+
+  getRecord2(row) {
+    this.paymentSharedService.saveOrder(row);
   }
 
 }

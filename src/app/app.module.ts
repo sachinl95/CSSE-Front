@@ -15,6 +15,7 @@ import { SuccessfullPaymentsService } from './payment/successfull-payments/succe
 import { PaymentSharedService } from './payment/payment-shared.service';
 import { ViewOrderService } from './payment/view-order/view-order.service'; 
 import { SiteService } from './procument-staff/site/site.service';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -39,7 +40,8 @@ import { SiteService } from './procument-staff/site/site.service';
     HttpModule,
     HttpClientModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    FormsModule
   ],
   providers: [PendingPaymentsService,
     SuccessfullPaymentsService,
